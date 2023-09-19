@@ -1,0 +1,14 @@
+:root {
+    --grid-columns: 12;
+    --grid-gap: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+    gap: var(--grid-gap);
+}
+
+// .grid-item {
+//     /* Usage: grid-column: span <col-span>; grid-row: span <row-span>; */
+// }

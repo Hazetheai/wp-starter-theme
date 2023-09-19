@@ -1,0 +1,12 @@
+.site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    padding-top: var(--space-xs);
+
+    &-main {
+        flex: 1;
+        overflow: hidden;
+        padding-top: 0.67em;
+    }
+}

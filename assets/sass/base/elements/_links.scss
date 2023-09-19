@@ -1,0 +1,66 @@
+a,
+.link {
+	text-underline-offset: 3px;
+	color: $color__link;
+	text-decoration: none;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+	}
+
+	&:focus {
+		outline: thin dotted;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+
+	&.uppercase {
+		text-transform: uppercase;
+		text-decoration: underline;
+		text-decoration-thickness: 1px;
+	}
+}
+
+span a,
+span .link {
+	color: currentColor;
+	text-decoration: underline;
+}
+
+a.button {
+	text-decoration: none;
+	&:hover,
+	&:focus,
+	&:active {
+		color: var(--color-theme-black);
+	}
+}
+
+.link-small {
+	@include text-style-link-small-tablet-mobile;
+	@include media(">tablet") {
+		@include text-style-link-small;
+	}
+	z-index: 1;
+	position: relative;
+}
+
+.link-small-underline {
+	@include text-style-link-small-underlined;
+	z-index: 1;
+	position: relative;
+}
+
+.link-large {
+	@include text-style-link-large-tablet-mobile;
+	@include media(">tablet") {
+		@include text-style-link-large;
+	}
+	z-index: 1;
+	position: relative;
+}

@@ -1,0 +1,50 @@
+.anim__image-reveal--start {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.transition {
+    display: flex;
+    position: fixed;
+    z-index: 99;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    pointer-events: none;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+// .anim__list-item-reveal--start {
+.transition li {
+    transform: scaleY(0);
+    background-color: var(--color-theme-white);
+    transition: background-color 800ms ease-in-out;
+    width: 22%;
+    &:nth-child(1) {
+        left: 1%;
+    }
+
+    .home & {
+        transition: background-color 800ms ease-in-out;
+        background-color: var(--color-theme-secondary);
+    }
+    .page:not(.home) & {
+        transition: background-color 800ms ease-in-out;
+        background-color: var(--color-theme-primary);
+    }
+    .text-page & {
+        transition: background-color 800ms ease-in-out;
+        background-color: var(--color-theme-secondary);
+    }
+}
+
+@keyframes floating {
+    from {
+        translate: 0 10px;
+    }
+    to {
+        translate: 0 -10px;
+    }
+}

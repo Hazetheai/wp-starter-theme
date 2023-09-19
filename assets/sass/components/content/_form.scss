@@ -1,0 +1,49 @@
+.module-form {
+    padding-bottom: var(--space-l);
+
+    & texarea {
+        max-height: 256px;
+    }
+
+    & .row {
+        display: flex;
+        flex-flow: column-reverse;
+        & .col-6 {
+            padding: 0 0 var(--space-3xs);
+        }
+        @include media(">tablet") {
+            display: block;
+        }
+    }
+    & .row .col-6 {
+        @media (min-width: 900px) and (max-width: 1132px) {
+            max-width: 800px;
+            margin: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @include media(">=tablet") {
+            // max-width: none;
+            // margin: 0 var(--space-3xs);
+        }
+    }
+
+    & .form-control + input {
+        max-width: 100%;
+    }
+
+    & .link-small {
+        text-transform: uppercase;
+        display: inline-block;
+        padding-bottom: var(--space-3xs);
+    }
+
+    address {
+        margin-bottom: var(--space-xs);
+
+        & + address {
+            margin-bottom: var(--space-l);
+        }
+    }
+}

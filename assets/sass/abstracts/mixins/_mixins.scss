@@ -1,0 +1,285 @@
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get($columns, $numberColumns) - (($columns__margin * ($numberColumns - 1)) / $numberColumns);
+}
+
+@mixin cover {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+@mixin center {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+@mixin ratio($height, $width) {
+	font-size: 0;
+	overflow: hidden;
+	position: relative;
+
+	&:after {
+		content: "";
+		display: inline-block;
+		padding-top: $width / $height * 100%;
+		width: 100%;
+	}
+}
+
+$color-aegean-blue: rgba(28, 67, 113, 1);
+$color-sky-blue: rgba(147, 209, 216, 1);
+$color-white: rgba(255, 255, 255, 1);
+$color-black: rgba(0, 0, 0, 1);
+$color-grey: rgba(248, 248, 248, 1);
+$color-alert: rgba(231, 116, 116, 1);
+@mixin text-style-subline() {
+	font-size: 32px;
+	font-family: "GT Pressura";
+	font-weight: 400;
+	font-style: normal;
+	line-height: 38px;
+	text-decoration: none;
+	text-transform: none;
+}
+
+@mixin text-style-subline-mobile() {
+	font-size: 24px;
+	font-family: "GT Pressura";
+	font-weight: 400;
+	font-style: normal;
+	line-height: 30px;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-notification() {
+	font-size: 14px;
+	font-family: "GT Pressura";
+	font-weight: 400;
+	font-style: normal;
+	line-height: 16px;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-quote-large() {
+	font-size: 32px;
+	font-family: "GT Pressura";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 38px;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-quote-large-mobile() {
+	font-size: 24px;
+	font-family: "GT Pressura";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 28px;
+	text-decoration: none;
+	text-transform: none;
+}
+
+@mixin text-style-copy-regular-desktop() {
+	font-size: 24px;
+	font-family: "GT Pressura";
+	font-weight: 400;
+	font-style: normal;
+	line-height: 30px;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-copy-regular-tablet-mobile() {
+	font-size: 20px;
+	font-family: "GT Pressura";
+	font-weight: 400;
+	font-style: normal;
+	line-height: 24px;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-copy-bold-desktop() {
+	font-size: 24px;
+	font-family: "GT Pressura";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 30px;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-copy-bold-tablet-mobile() {
+	font-size: 20px;
+	font-family: "GT Pressura";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 24px;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-headlines-h-1-desktop() {
+	font-size: 150px;
+	font-family: "GT Pressura";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 160px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+@mixin text-style-headlines-h-1-tablet() {
+	font-size: 112px;
+	font-family: "GT Pressura";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 120px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+@mixin text-style-headlines-h-1-mobile() {
+	font-size: 48px;
+	font-family: "GT Pressura";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 54px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+@mixin text-style-headlines-h-2-desktop() {
+	font-size: 96px;
+	font-family: "GT Pressura";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 102px;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-headlines-h-2-tablet() {
+	font-size: 72px;
+	font-family: "GT Pressura";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 78px;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-headlines-h-2-mobile() {
+	font-size: 40px;
+	font-family: "GT Pressura";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 48px;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-headlines-h-3-desktop() {
+	font-size: 48px;
+	font-family: "GT Pressura";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 56px;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-headlines-h-3-tablet() {
+	font-size: 40px;
+	font-family: "GT Pressura";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 48px;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-headlines-h-3-mobile() {
+	font-size: 32px;
+	font-family: "GT Pressura";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 38px;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-link-small() {
+	font-size: 20px;
+	font-family: "GT Pressura";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 24px;
+	letter-spacing: 0.04em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+@mixin text-style-link-small-underlined() {
+	font-size: 20px;
+	font-family: "GT Pressura";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 24px;
+	letter-spacing: 0.04em;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+@mixin text-style-link-large() {
+	font-size: 32px;
+	font-family: "GT Pressura";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 38px;
+	text-decoration: none;
+	text-transform: none;
+}
+@mixin text-style-link-large-tablet-mobile() {
+	font-size: 24px;
+	font-family: "GT Pressura";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 30px;
+	text-decoration: none;
+	text-transform: none;
+	letter-spacing: 0.02em;
+}
+@mixin text-style-link-small-tablet-mobile() {
+	font-size: 20px;
+	font-family: "GT Pressura";
+	font-weight: 700;
+	font-style: normal;
+	line-height: 24px;
+	text-decoration: none;
+	text-transform: none;
+	letter-spacing: 0.04em;
+}
+@mixin effect-style-drop-shadow() {
+	box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+}
+
+@mixin truncate {
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: calc(100vw - 2 * var(--space-xs));
+}
+
+@mixin aspect-ratio-fallback {
+	@supports not (aspect-ratio: 16 / 9) {
+		&::before {
+			float: left;
+			padding-top: 62.5%;
+			content: "";
+		}
+
+		&::after {
+			display: block;
+			content: "";
+			clear: both;
+		}
+	}
+}

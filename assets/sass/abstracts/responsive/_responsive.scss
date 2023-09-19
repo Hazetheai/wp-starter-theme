@@ -1,0 +1,71 @@
+$breakpoints: (
+    "phone-xs": 375px,
+    "phone-s": 475px,
+    "phone": 768px,
+    "tablet": 1132px,
+    "desktop": 1512px
+) !default;
+
+@import "./_include-media.scss";
+
+.hide-for-phone {
+    @include media(">=phone") {
+        display: none !important;
+    }
+}
+.hide-for-tablet {
+    @include media(">=tablet") {
+        display: none !important;
+    }
+}
+.hide-for-desktop {
+    @include media(">=desktop") {
+        display: none !important;
+    }
+}
+.show-for-phone {
+    @include media("<phone") {
+        display: none !important;
+    }
+}
+.show-for-tablet {
+    @include media("<tablet") {
+        display: none !important;
+    }
+}
+.show-for-desktop {
+    @include media("<desktop") {
+        display: none !important;
+    }
+}
+
+:root {
+    // Figma Spacing Steps
+
+    --space-step-s: var(--space-3xs);
+
+    @include media(">phone") {
+        --space-step-s: var(--space-2xs);
+    }
+    @include media(">tablet") {
+        --space-step-s: var(--space-xs);
+    }
+    //
+    --space-step-m: var(--space-s);
+
+    @include media(">phone") {
+        --space-step-m: var(--space-m);
+    }
+    @include media(">tablet") {
+        --space-step-m: var(--space-l);
+    }
+    //
+    --space-step-l: var(--space-xl);
+
+    @include media(">phone") {
+        --space-step-l: var(--space-2xl);
+    }
+    @include media(">tablet") {
+        --space-step-l: var(--space-3xl);
+    }
+}

@@ -1,0 +1,77 @@
+.model-image {
+  width: 300px;
+  position: absolute;
+  top: -40px;
+  right: 100px;
+  background: transparent !important;
+}
+
+.block-editor-wrapper {
+  padding: 6rem 0;
+}
+
+.main-title {
+  font-size: 4.8rem;
+  font-family: "GT Pressura";
+  font-weight: 700;
+  font-style: normal;
+  line-height: 102px;
+  text-decoration: none;
+  text-transform: none;
+
+  @media only screen and (min-width: 900px) {
+    font-size: 4.8rem;
+    font-family: "GT Pressura";
+    font-weight: 700;
+    font-style: normal;
+    line-height: 102px;
+    text-decoration: none;
+    text-transform: none;
+  }
+}
+
+h1.hero-title {
+  color: var(--color-heading) !important;
+  background: transparent !important;
+}
+
+h1.hero-title mark {
+  color: var(--color-text-alt) !important;
+  background-color: var(--color-bg) !important;
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  font-family: "GT Pressura";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 38px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+}
+
+.crumb,
+.breadcrumb-wrapper svg {
+  margin-right: 1rem;
+}
+
+.breadcrumb-wrapper {
+  padding-left: 25px;
+}
+
+.wp-block-vitestarter-hero .block-theme .crumb,
+.wp-block-vitestarter-hero .block-theme .crumb + svg {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-heading);
+}
+
+.wp-block-vitestarter-hero .block-theme .root-crumb,
+.wp-block-vitestarter-hero .block-theme .root-crumb + svg > path {
+  color: var(--color-text-alt);
+}

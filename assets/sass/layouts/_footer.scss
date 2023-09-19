@@ -1,0 +1,27 @@
+.site-footer {
+    max-height: 120px;
+    padding: var(--space-xs) 0;
+    background-color: var(--color-theme-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include media(">tablet") {
+        min-height: auto;
+        height: auto;
+        max-height: none;
+    }
+    & .site-info {
+        margin: 0 auto;
+        gap: var(--space-s);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+body.home .site-footer {
+    @include media(">tablet") {
+        padding: 0 0 var(--space-xl) 0;
+    }
+}

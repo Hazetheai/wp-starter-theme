@@ -1,0 +1,38 @@
+section[class*="module-"] {
+    padding-top: calc(var(--space-m));
+    padding-bottom: calc(var(--space-m));
+    position: relative;
+
+    @include media(">phone") {
+        padding-top: calc(var(--space-l));
+        padding-bottom: calc(var(--space-l));
+    }
+
+    &.no-padding-t {
+        padding-top: 0;
+    }
+    &.no-padding-b {
+        padding-bottom: 0;
+    }
+    &.no-padding-x {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    &.module-hero {
+        padding-bottom: 0;
+        padding-top: calc(var(--space-3xl) + var(--space-s));
+        & + section {
+            padding-top: 0;
+        }
+        & + section.module-form {
+            padding-top: calc(var(--space-xl));
+        }
+    }
+}
+
+[data-barba-namespace="home-page"] section.module-palette-white,
+[data-barba-namespace="home-page"] section.module-palette-secondary,
+[data-barba-namespace="home-page"] section.module-palette-gray {
+    background-color: var(--color-theme-primary);
+}

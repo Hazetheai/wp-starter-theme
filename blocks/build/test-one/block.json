@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "funtime/test-one",
+  "version": "0.1.0",
+  "title": "test-one",
+  "category": "funtime",
+  "description": "",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "funtime",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor-style.css",
+  "style": "file:./style.css"
+}

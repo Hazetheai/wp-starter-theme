@@ -1,0 +1,93 @@
+.form-controls {
+    list-style: none;
+    margin: 0;
+}
+
+.form-control {
+    position: relative;
+    display: flex;
+    flex-flow: column-reverse;
+
+    & label,
+    & input {
+        transition: all $anim-duration;
+        touch-action: manipulation;
+    }
+
+    & .floating-label {
+        margin-top: calc(-1 * var(--space-s));
+    }
+
+    & select {
+    }
+}
+
+.form-submit {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row-reverse;
+    align-items: center;
+    margin-top: calc(var(--space-m));
+}
+
+.floating-label {
+    cursor: text;
+    max-width: 66.66%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(1rem, 2.7rem) scale(1);
+    pointer-events: none;
+}
+.floating-label--active {
+    // transform: translate(0, 0) scale(0.6);
+    // cursor: pointer;
+    opacity: 0;
+}
+/**
+* By default, the placeholder should be transparent. Also, it should 
+* inherit the transition.
+*/
+::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+}
+
+input:focus::-webkit-input-placeholder {
+    opacity: 1;
+}
+
+.form-control + .form-control {
+    margin-top: var(--space-xs);
+}
+
+.wpcf7-list-item {
+    margin: 0;
+    label {
+        cursor: pointer;
+        gap: 10px;
+        display: flex;
+        align-items: center;
+    }
+}
+.just-validate-error-label {
+    position: absolute;
+    bottom: calc(var(--space-xs) * -1);
+    left: -5.8%;
+    transform: scale(0.7);
+}
+
+// select + .just-validate-error-label {
+//     right: 6%;
+// }
+textarea ~ .just-validate-error-label {
+}
+
+.wpcf7-form {
+    max-width: 800px;
+}
+
+.wpcf7 form .wpcf7-response-output {
+    margin-left: 3em;
+}

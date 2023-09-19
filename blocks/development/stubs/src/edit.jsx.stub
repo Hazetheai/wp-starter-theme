@@ -1,0 +1,54 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/react-in-jsx-scope */
+
+import {
+  BlockControls,
+  InspectorControls,
+  useBlockProps,
+} from "@wordpress/block-editor";
+import { ColorPalette, PanelBody, ToolbarGroup } from "@wordpress/components";
+import { __ } from "@wordpress/i18n";
+
+import "../../../shared/editor-style.scss";
+import { colors } from "../../../shared/lib";
+import "./editor-style.css";
+
+export default function Edit({ attributes, setAttributes, isSelected }) {
+  const { background } = attributes;
+
+  const blockProps = useBlockProps({
+    className: `module-palette-${background?.name}`,
+  });
+
+  const onChangeColor = (value) => {
+    setAttributes({
+      ...attributes,
+      background: {
+        color: value,
+        name: Object.keys(colors).find((el) => colors[el] === value),
+      },
+    });
+  };
+
+  return (
+    <div key="render" {...blockProps}>
+      <InspectorControls>
+        <PanelBody title={__("General", "vite-starter")} initialOpen>
+          <ColorPalette
+            colors={Object.keys(colors).map((el) => ({
+              name: el,
+              color: colors[el],
+            }))}
+            value={background.color}
+            style={{ width: "200px" }}
+            onChange={onChangeColor}
+            disableCustomColors={true}
+          />
+        </PanelBody>
+      </InspectorControls>
+      <BlockControls>
+        <ToolbarGroup>{/* Block controls */}</ToolbarGroup>
+      </BlockControls>
+    </div>
+  );
+}

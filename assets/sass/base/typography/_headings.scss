@@ -1,0 +1,45 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+	// z-index: 1;
+	// position: relative;
+
+	& mark,
+	& span {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+.text-h1 {
+	@include text-style-headlines-h-1-mobile;
+	@include media(">phone") {
+		@include text-style-headlines-h-1-tablet;
+	}
+	@include media(">=desktop") {
+		@include text-style-headlines-h-1-desktop;
+	}
+}
+
+.text-h2 {
+	@include text-style-headlines-h-2-mobile;
+	@include media(">phone") {
+		@include text-style-headlines-h-2-tablet;
+	}
+	@include media(">=desktop") {
+		@include text-style-headlines-h-2-desktop;
+	}
+}
+.text-h3 {
+	@include text-style-headlines-h-3-mobile;
+	@include media(">phone") {
+		@include text-style-headlines-h-3-tablet;
+	}
+	@include media(">=desktop") {
+		@include text-style-headlines-h-3-desktop;
+	}
+}

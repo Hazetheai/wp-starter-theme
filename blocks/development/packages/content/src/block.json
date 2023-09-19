@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "vitestarter/content",
+  "version": "0.1.0",
+  "title": "content",
+  "category": "vitestarter",
+  "description": "",
+  "supports": {
+    "html": false
+  },
+
+  "textdomain": "vitestarter",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor-style.css",
+  "style": "file:./style.css"
+}

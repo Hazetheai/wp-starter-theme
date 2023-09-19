@@ -1,0 +1,10 @@
+.site-title {
+    font-size: 2em;
+    // margin: 0.67em 0;
+
+    svg {
+        @include media(">=tablet") {
+            font-size: 54px;
+        }
+    }
+}
