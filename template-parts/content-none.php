@@ -10,18 +10,21 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>"
+	<?php post_class(); ?>>
 
-	<?php vite_starter_post_thumbnail(); ?>
+	<?php bhb_bayern_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
 		// WP Query to find a page with the title '404'
-		$the_query = new WP_Query(array(
-			'title' => '404',
-			'post_type' => 'page',
-			'posts_per_page' => 1
-		));
+		$the_query = new WP_Query(
+			array(
+				'title' => '404',
+				'post_type' => 'page',
+				'posts_per_page' => 1
+			)
+		);
 		// The Loop
 		if ($the_query->have_posts()) {
 			while ($the_query->have_posts()) {

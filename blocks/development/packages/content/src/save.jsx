@@ -266,7 +266,7 @@ export default function Save({ attributes }) {
             {attributes.scrollButton && (
               <div className="scroll-button-container">
                 <button className="scroll-button">
-                  {__("Mehr Erfahren", "vite-starter")}
+                  {__("Mehr Erfahren", "bhb-bayern")}
                   <svg
                     width="20"
                     height="20"

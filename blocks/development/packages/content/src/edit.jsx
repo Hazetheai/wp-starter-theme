@@ -101,25 +101,25 @@ export default function Edit({ attributes, setAttributes }) {
   const toolbarControls = [
     {
       icon: "align-pull-left",
-      title: __("Show media on left", "vite-starter"),
+      title: __("Show media on left", "bhb-bayern"),
       isActive: mediaPosition === "left",
       onClick: () => setAttributes({ mediaPosition: "left" }),
     },
     {
       icon: Top,
-      title: __("Stack at top of a column", "vite-starter"),
+      title: __("Stack at top of a column", "bhb-bayern"),
       isActive: mediaPosition === "top",
       onClick: () => setAttributes({ mediaPosition: "top" }),
     },
     {
       icon: Bottom,
-      title: __("Stack at bottom of a column", "vite-starter"),
+      title: __("Stack at bottom of a column", "bhb-bayern"),
       isActive: mediaPosition === "bottom",
       onClick: () => setAttributes({ mediaPosition: "bottom" }),
     },
     {
       icon: "align-pull-right",
-      title: __("Show media on right", "vite-starter"),
+      title: __("Show media on right", "bhb-bayern"),
       isActive: mediaPosition === "right",
       onClick: () => setAttributes({ mediaPosition: "right" }),
     },
@@ -129,7 +129,7 @@ export default function Edit({ attributes, setAttributes }) {
     <div key="render" {...blockProps}>
       <div className="block-editor-wrapper block-theme row">
         <InspectorControls>
-          <PanelBody title={__("General", "vite-starter")} initialOpen>
+          <PanelBody title={__("General", "bhb-bayern")} initialOpen>
             <ColorPalette
               colors={Object.keys(colors).map((el) => ({
                 name: el,
@@ -223,7 +223,7 @@ const ContentRow = (props) => {
         } module-content__editor-wrapper`}
       >
         <InspectorControls>
-          <PanelBody title={__("Aktionspunkte", "vite-starter")} initialOpen>
+          <PanelBody title={__("Aktionspunkte", "bhb-bayern")} initialOpen>
             <ToggleControl
               label="Einen Button zum Herunterscrollen hinzufügen?"
               help={scrollButton ? "Button hinzugefügt." : ""}
@@ -257,7 +257,7 @@ const ContentRow = (props) => {
                   <ToolbarButton
                     icon="cover-image"
                     onClick={open}
-                    title={__("Bild Bearbeiten", "vite-starter")}
+                    title={__("Bild Bearbeiten", "bhb-bayern")}
                   ></ToolbarButton>
                 )}
               />
@@ -276,7 +276,7 @@ const ContentRow = (props) => {
                     <ToolbarButton
                       icon={"media-video"}
                       onClick={open}
-                      title={__("Video Bild Bearbeiten", "vite-starter")}
+                      title={__("Video Bild Bearbeiten", "bhb-bayern")}
                     ></ToolbarButton>
                   )}
                 />
@@ -285,7 +285,7 @@ const ContentRow = (props) => {
             {poster.url && (
               <ToolbarButton
                 icon={"remove"}
-                title={__("Video Bild Löschen", "vite-starter")}
+                title={__("Video Bild Löschen", "bhb-bayern")}
                 onClick={() => onChange({ poster: { url: null, alt: null } })}
               ></ToolbarButton>
             )}
@@ -349,7 +349,7 @@ const ContentRow = (props) => {
               title: "Media",
               instructions: __(
                 "Ein Video oder Bild hinzufügen.",
-                "vite-starter"
+                "bhb-bayern"
               ),
             }}
             onSelect={(media) => {
@@ -375,21 +375,21 @@ const ContentRow = (props) => {
           <PlainText
             tagName="span"
             value={kicker}
-            placeholder={__("Kicker here", "vite-starter")}
+            placeholder={__("Kicker here", "bhb-bayern")}
             className="kicker"
             onChange={(content) => onChange({ kicker: content })}
           />
           <PlainText
             tagName="h3"
             value={title}
-            placeholder={__("Title here", "vite-starter")}
+            placeholder={__("Title here", "bhb-bayern")}
             className="title"
             onChange={(content) => onChange({ title: content })}
           />
           <RichText
             tagName="div"
             value={paragraph}
-            placeholder={__("Text here", "vite-starter")}
+            placeholder={__("Text here", "bhb-bayern")}
             // multiline="li"
             className="paragraph"
             onChange={(content) => {
@@ -408,7 +408,7 @@ const ContentRow = (props) => {
           <div className="cta-section">
             {cta1.url && (
               <Button variant="primary">
-                {__(cta1.title, "vite-starter")}
+                {__(cta1.title, "bhb-bayern")}
               </Button>
             )}
             <Button icon="edit" onClick={() => setIsEditingCTA(true)} />
@@ -418,14 +418,14 @@ const ContentRow = (props) => {
                 shouldCloseOnEsc
                 shouldCloseOnClickOutside
                 overlayClassName="my-extra-modal-overlay-class"
-                cardTitle={__("Bearbeiten Sie den Hyperlink", "vite-starter")}
+                cardTitle={__("Bearbeiten Sie den Hyperlink", "bhb-bayern")}
                 onRequestClose={() => setIsEditingCTA(false)}
               >
                 <div
                   className=""
                   style={{ maxHeight: "2rem", paddingBottom: "3.5em" }}
                 >
-                  {__("Bearbeiten Sie den Hyperlink", "vite-starter")}
+                  {__("Bearbeiten Sie den Hyperlink", "bhb-bayern")}
                   <PlainText
                     value={cta1?.title}
                     tagName="p"
@@ -437,7 +437,7 @@ const ContentRow = (props) => {
                   />
                 </div>
                 <LinkControl
-                  searchInputPlaceholder={__("Suche hier...", "vite-starter")}
+                  searchInputPlaceholder={__("Suche hier...", "bhb-bayern")}
                   value={cta1}
                   settings={[
                     {
@@ -464,7 +464,7 @@ const ContentRow = (props) => {
                       setIsEditingCTA(false);
                     }}
                   >
-                    {__("Löschen", "vite-starter")}
+                    {__("Löschen", "bhb-bayern")}
                   </Button>
                   <Button
                     variant="primary"
@@ -472,7 +472,7 @@ const ContentRow = (props) => {
                       setIsEditingCTA(false);
                     }}
                   >
-                    {__("Speichern", "vite-starter")}
+                    {__("Speichern", "bhb-bayern")}
                   </Button>
                 </div>
               </Modal>
@@ -497,7 +497,7 @@ const ContentRow = (props) => {
                 render={({ openFileDialog }) => (
                   <div>
                     <Button variant="secondary" onClick={openFileDialog}>
-                      {__("Datei hochladen", "vite-starter")}
+                      {__("Datei hochladen", "bhb-bayern")}
                     </Button>
                   </div>
                 )}
@@ -507,7 +507,7 @@ const ContentRow = (props) => {
 
           {scrollButton && (
             <Button variant="secondary" className={"scroll-button"}>
-              {__("Mehr Erfahren", "vite-starter")}
+              {__("Mehr Erfahren", "bhb-bayern")}
             </Button>
           )}
         </div>

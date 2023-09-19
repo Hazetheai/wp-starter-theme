@@ -8,11 +8,11 @@
  * @package Vite_starter
  */
 
-if (!function_exists('vite_starter_posted_on')) :
+if (!function_exists('bhb_bayern_posted_on')):
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
 	 */
-	function vite_starter_posted_on()
+	function bhb_bayern_posted_on()
 	{
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if (get_the_time('U') !== get_the_modified_time('U')) {
@@ -29,7 +29,7 @@ if (!function_exists('vite_starter_posted_on')) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x('Posted on %s', 'post date', 'vite-starter'),
+			esc_html_x('Posted on %s', 'post date', 'bhb-bayern'),
 			'<a href="' . esc_url(get_permalink()) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -38,15 +38,15 @@ if (!function_exists('vite_starter_posted_on')) :
 	}
 endif;
 
-if (!function_exists('vite_starter_posted_by')) :
+if (!function_exists('bhb_bayern_posted_by')):
 	/**
 	 * Prints HTML with meta information for the current author.
 	 */
-	function vite_starter_posted_by()
+	function bhb_bayern_posted_by()
 	{
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x('by %s', 'post author', 'vite-starter'),
+			esc_html_x('by %s', 'post author', 'bhb-bayern'),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>'
 		);
 
@@ -55,26 +55,26 @@ if (!function_exists('vite_starter_posted_by')) :
 	}
 endif;
 
-if (!function_exists('vite_starter_entry_footer')) :
+if (!function_exists('bhb_bayern_entry_footer')):
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function vite_starter_entry_footer()
+	function bhb_bayern_entry_footer()
 	{
 		// Hide category and tag text for pages.
 		if ('post' === get_post_type()) {
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list(esc_html__(', ', 'vite-starter'));
+			$categories_list = get_the_category_list(esc_html__(', ', 'bhb-bayern'));
 			if ($categories_list) {
 				/* translators: 1: list of categories. */
-				printf('<span class="cat-links">' . esc_html__('Posted in %1$s', 'vite-starter') . '</span>', $categories_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf('<span class="cat-links">' . esc_html__('Posted in %1$s', 'bhb-bayern') . '</span>', $categories_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list('', esc_html_x(', ', 'list item separator', 'vite-starter'));
+			$tags_list = get_the_tag_list('', esc_html_x(', ', 'list item separator', 'bhb-bayern'));
 			if ($tags_list) {
 				/* translators: 1: list of tags. */
-				printf('<span class="tags-links">' . esc_html__('Tagged %1$s', 'vite-starter') . '</span>', $tags_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf('<span class="tags-links">' . esc_html__('Tagged %1$s', 'bhb-bayern') . '</span>', $tags_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 		}
 
@@ -84,7 +84,7 @@ if (!function_exists('vite_starter_entry_footer')) :
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__('Edit <span class="screen-reader-text">%s</span>', 'vite-starter'),
+					__('Edit <span class="screen-reader-text">%s</span>', 'bhb-bayern'),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -99,29 +99,32 @@ if (!function_exists('vite_starter_entry_footer')) :
 	}
 endif;
 
-if (!function_exists('vite_starter_post_thumbnail')) :
+if (!function_exists('bhb_bayern_post_thumbnail')):
 	/**
 	 * Displays an optional post thumbnail.
 	 *
 	 * Wraps the post thumbnail in an anchor element on index views, or a div
 	 * element when on single views.
 	 */
-	function vite_starter_post_thumbnail()
+	function bhb_bayern_post_thumbnail()
 	{
 		if (post_password_required() || is_attachment() || !has_post_thumbnail()) {
 			return;
 		}
 
-		if (is_singular()) :
-?>
+		if (is_singular()):
+			?>
 
 			<div class="post-thumbnail">
 				<?php the_post_thumbnail(); ?>
 			</div><!-- .post-thumbnail -->
 
-		<?php else : ?>
+		<?php else: ?>
 
-			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+			<a class="post-thumbnail"
+				href="<?php the_permalink(); ?>"
+				aria-hidden="true"
+				tabindex="-1">
 				<?php
 				the_post_thumbnail(
 					'post-thumbnail',
@@ -136,12 +139,12 @@ if (!function_exists('vite_starter_post_thumbnail')) :
 				?>
 			</a>
 
-<?php
+			<?php
 		endif; // End is_singular().
 	}
 endif;
 
-if (!function_exists('wp_body_open')) :
+if (!function_exists('wp_body_open')):
 	/**
 	 * Shim for sites older than 5.2.
 	 *

@@ -121,7 +121,7 @@ export default function Edit({ attributes, setAttributes }) {
     <div key="render" {...blockProps}>
       <div className="block-editor-wrapper block-theme row">
         <InspectorControls>
-          <PanelBody title={__("General", "vite-starter")} initialOpen>
+          <PanelBody title={__("General", "bhb-bayern")} initialOpen>
             <DropdownMenu
               icon={"buddicons-activity"}
               label="Select a model"
@@ -147,7 +147,7 @@ export default function Edit({ attributes, setAttributes }) {
             tagName="h1"
             value={title}
             allowedFormats={["vitestarter/highlight"]}
-            placeholder={__("Title here", "vite-starter")}
+            placeholder={__("Title here", "bhb-bayern")}
             className="title hero-title top text-h2"
             onChange={(content) =>
               setAttributes({
@@ -159,7 +159,7 @@ export default function Edit({ attributes, setAttributes }) {
           <PlainText
             tagName="p"
             value={subtitle}
-            placeholder={__("Subtitle here", "vite-starter")}
+            placeholder={__("Subtitle here", "bhb-bayern")}
             className="subtitle"
             onChange={(content) => setAttributes({ subtitle: content })}
           />

@@ -10,10 +10,11 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>"
+	<?php post_class(); ?>>
 
 
-	<?php vite_starter_post_thumbnail(); ?>
+	<?php bhb_bayern_post_thumbnail(); ?>
 
 	<!-- <div class="entry-content ">
 
@@ -23,7 +24,7 @@
 		// sprintf(
 		// 	wp_kses(
 		// 		/* translators: %s: Name of current post. Only visible to screen readers */
-		// 		__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'vite-starter'),
+		// 		__('Continue reading<span class="screen-reader-text"> "%s"</span>', 'bhb-bayern'),
 		// 		array(
 		// 			'span' => array(
 		// 				'class' => array(),
@@ -36,7 +37,7 @@
 
 	// wp_link_pages(
 	// 	array(
-	// 		'before' => '<div class="page-links">' . esc_html__('Pages:', 'vite-starter'),
+	// 		'before' => '<div class="page-links">' . esc_html__('Pages:', 'bhb-bayern'),
 	// 		'after'  => '</div>',
 	// 	)
 	// );
@@ -47,6 +48,6 @@
 		<script type="text/javascript">
 			console.log('template-parts/content.php')
 		</script>
-		<!-- <?php vite_starter_entry_footer(); ?> -->
+		<!-- <?php bhb_bayern_entry_footer(); ?> -->
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

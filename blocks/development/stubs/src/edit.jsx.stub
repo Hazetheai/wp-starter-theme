@@ -33,7 +33,7 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
   return (
     <div key="render" {...blockProps}>
       <InspectorControls>
-        <PanelBody title={__("General", "vite-starter")} initialOpen>
+        <PanelBody title={__("General", "bhb-bayern")} initialOpen>
           <ColorPalette
             colors={Object.keys(colors).map((el) => ({
               name: el,

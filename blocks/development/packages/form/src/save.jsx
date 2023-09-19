@@ -30,13 +30,13 @@ export default function Save({ attributes }) {
           </div>
           <div className="col-6">
             <span className="link-small text-color-alt">
-              {__("Telefonnummer", "vite-starter")}
+              {__("Telefonnummer", "bhb-bayern")}
             </span>
             <address className="text-h3 text-color-heading text-h3 text-color-heading">
-              {__("0234/6234039", "vite-starter")}
+              {__("0234/6234039", "bhb-bayern")}
             </address>
             <address className="copy-regular">
-              {__("Unsere Telefonzeiten: Mo-Fr 10 – 17 Uhr", "vite-starter")}
+              {__("Unsere Telefonzeiten: Mo-Fr 10 – 17 Uhr", "bhb-bayern")}
             </address>
           </div>
         </div>

@@ -41,7 +41,7 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
     <div key="render" {...blockProps}>
       <div className="block-editor-wrapper block-theme row flex-between items-start">
         <InspectorControls>
-          <PanelBody title={__("General", "vite-starter")} initialOpen>
+          <PanelBody title={__("General", "bhb-bayern")} initialOpen>
             <ColorPalette
               colors={Object.keys(colors).map((el) => ({
                 name: el,
@@ -62,7 +62,7 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
           <SelectControl
             value={form}
             options={[{ value: "contact", label: "Kontakt" }]}
-            label={__("Form", "vite-starter")}
+            label={__("Form", "bhb-bayern")}
             onChange={(newForm) => setAttributes({ form: newForm })}
           />
           {subjects.map((subject) => {
@@ -142,13 +142,13 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
         </div>
         <div className="col-6">
           <span className="link-small text-color-alt">
-            {__("Telefonnummer", "vite-starter")}
+            {__("Telefonnummer", "bhb-bayern")}
           </span>
           <address className="text-h3 text-color-heading">
-            {__("0234/6234039", "vite-starter")}
+            {__("0234/6234039", "bhb-bayern")}
           </address>
           <address className="copy-regular">
-            {__("Unsere Telefonzeiten: Mo-Fr 10 – 17 Uhr", "vite-starter")}
+            {__("Unsere Telefonzeiten: Mo-Fr 10 – 17 Uhr", "bhb-bayern")}
           </address>
         </div>
       </div>

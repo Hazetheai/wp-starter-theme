@@ -10,9 +10,10 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>"
+	<?php post_class(); ?>>
 
-	<?php vite_starter_post_thumbnail(); ?>
+	<?php bhb_bayern_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php

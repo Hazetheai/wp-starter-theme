@@ -24,7 +24,7 @@ const ListButton = ({ isActive, value, onChange }) => {
       <ToolbarGroup>
         <ToolbarButton
           icon="editor-ul"
-          title={__("List", "vite-starter")}
+          title={__("List", "bhb-bayern")}
           onClick={onToggle}
           isActive={isActive}
         />
@@ -35,7 +35,7 @@ const ListButton = ({ isActive, value, onChange }) => {
 
 export const richTextList = {
   name,
-  title: __("List", "vite-starter"),
+  title: __("List", "bhb-bayern"),
   tagName: "ul",
   className: null,
   //   attributes: {

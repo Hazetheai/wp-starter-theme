@@ -12,21 +12,24 @@
 
 ?>
 
-<footer id="colophon" class="site-footer">
+<footer id="colophon"
+	class="site-footer">
 
 
 	<div class="site-info module-palette-primary">
-		<a class="uppercase link-small" href="<?= get_site_url() . '/impressum' ?>">
+		<a class="uppercase link-small"
+			href="<?= get_site_url() . '/impressum' ?>">
 			<?php
 
-			_e('Impressum', 'vite-starter');
+			_e('Impressum', 'bhb-bayern');
 			?>
 		</a>
 		<span class="sep"> </span>
-		<a class="uppercase link-small" href="<?= get_site_url() . '/datenschutz' ?>">
+		<a class="uppercase link-small"
+			href="<?= get_site_url() . '/datenschutz' ?>">
 			<?php
 
-			_e('Datenschutz', 'vite-starter');
+			_e('Datenschutz', 'bhb-bayern');
 			?>
 		</a>
 

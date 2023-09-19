@@ -32,10 +32,10 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
     <div key="render" {...blockProps}>
       {console.log("activeItem", activeItem)}
       <InspectorControls>
-        <PanelBody title={__("General", "vite-starter")} initialOpen>
+        <PanelBody title={__("General", "bhb-bayern")} initialOpen>
           <ToggleControl
             checked={options.multiple}
-            label={__("Mehrere Artikel öffnen?", "vite-starter")}
+            label={__("Mehrere Artikel öffnen?", "bhb-bayern")}
             onChange={() =>
               setAttributes({
                 options: { ...options, multiple: !options.multiple },
@@ -43,7 +43,7 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
             }
           />
         </PanelBody>
-        <PanelBody cardTitle={__("Aktionspunkte", "vite-starter")} initialOpen>
+        <PanelBody cardTitle={__("Aktionspunkte", "bhb-bayern")} initialOpen>
           <Button
             onClick={() =>
               setAttributes({
@@ -53,7 +53,7 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
               })
             }
           >
-            {__("Einen Artikel hinzufügen?", "vite-starter")}
+            {__("Einen Artikel hinzufügen?", "bhb-bayern")}
           </Button>
         </PanelBody>
       </InspectorControls>
@@ -68,7 +68,7 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
                 }),
               })
             }
-            cardTitle={__("Einen Artikel hinzufügen?", "vite-starter")}
+            cardTitle={__("Einen Artikel hinzufügen?", "bhb-bayern")}
             variant="secondary"
             icon={"insert"}
           />
@@ -95,7 +95,7 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
               />
               <label className="tab-label flex-between" htmlFor={id}>
                 <InputControl
-                  label={__("Fragen", "vite-starter")}
+                  label={__("Fragen", "bhb-bayern")}
                   labelPosition="top"
                   type="text"
                   isPressEnterToChange
@@ -154,7 +154,7 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
                     items: items.filter((_item) => _item.id !== item.id),
                   })
                 }
-                title={__("Löschen", "vite-starter")}
+                title={__("Löschen", "bhb-bayern")}
                 variant="secondary"
                 icon={"remove"}
               />
