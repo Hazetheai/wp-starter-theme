@@ -1,40 +1,36 @@
 :root {
-    --color-theme-primary: #1c4371;
-    --color-theme-secondary: #93d1d8;
+    --color-green-dark: #0f4533ff;
+    --color-green-middle: #708573ff;
+    --color-green-light: #ebf4efff;
+    --color-white: #ffffffff;
+    --color-beige: #fcf7f0ff;
+
+    --color-theme-primary-green-dark: #0f4533;
+    --color-theme-primary-green-middle: #708573;
+    --color-theme-primary-green-light: #ebf4ef;
     --color-theme-white: #fff;
     --color-theme-grey: #e4e4e4;
     --color-theme-black: #000;
-    --color-theme-alert: #e77474;
 
-    --color-bg: var(--color-theme-primary, #1c4371);
-    --color-heading: var(--color-theme-white, #fff);
-    --color-text: var(--color-theme-white, #fff);
-    --color-text-alt: var(--color-theme-secondary, #93d1d8);
-}
+    /* Aliases  */
 
-.module-palette-primary {
-    --color-bg: var(--color-theme-primary, #1c4371);
-    --color-heading: var(--color-theme-white, #fff);
-    --color-text: var(--color-theme-white, #fff);
-    --color-text-alt: var(--color-theme-secondary, #93d1d8);
-}
-.module-palette-secondary {
-    --color-bg: var(--color-theme-secondary, #93d1d8);
-    --color-heading: var(--color-theme-white, #fff);
-    --color-text: var(--color-theme-black, #000);
-    --color-text-alt: var(--color-theme-primary, #1c4371);
-}
-.module-palette-white {
-    --color-bg: var(--color-theme-white, #fff);
-    --color-heading: var(--color-theme-secondary, #93d1d8);
-    --color-text: var(--color-theme-black, #000);
-    --color-text-alt: var(--color-theme-primary, #1c4371);
-}
-.module-palette-grey {
-    --color-bg: var(--color-theme-grey, #e4e4e4);
-    --color-heading: var(--color-theme-primary, #1c4371);
-    --color-text: var(--color-theme-black, #000);
-    --color-text-alt: var(--color-theme-secondary, #93d1d8);
+    --color-bg: var(--color-theme-primary-green-light);
+    --color-text: var(--color-theme-primary-green-dark);
+    --color-heading: var(--color-theme-primary-green-dark);
+
+    --text-text-primary: var(--color-green-dark);
+    --surface-surface-primary: var(--color-white);
+    --text-text-secondary: var(--color-white);
+    --border-border-primary: var(--color-green-dark);
+    --surface-surface-secondary: var(--color-green-light);
+    --surface-surface-transparent: var(--color-transparent);
+    --text-text-cta: var(--color-green-dark);
+    --decoration-decoration: var(--color-green-middle);
+    --text-text-cta-hover: var(--color-white);
+    --border-border-cta-hover: var(--color-green-dark);
+    --surface-surface-cta-hover: var(--color-green-dark);
+    --icon-icon: var(--color-green-dark);
+    --border-border-secondary: var(--color-green-middle);
 }
 
 $color__background-body: var(--color-bg);
@@ -46,14 +42,14 @@ $color__background-ins: var(--color-bg);
 
 $color__text-screen: var(--color-text);
 $color__text-input: var(--color-text);
-$color__text-input-focus: var(--color-text-alt);
+$color__text-input-focus: var(--color-text);
 $color__link: var(--color-heading);
-$color__link-visited: var(--color-heading); //purple
-$color__link-hover: var(--color-text-alt); //midnightblue
+$color__link-visited: var(--color-heading);
+$color__link-hover: var(--color-text);
 $color__text-main: var(--color-text);
 
 $color__border-button: var(--color-text);
-$color__border-button-hover: var(--color-text-alt);
-$color__border-button-focus: var(--color-text-alt);
+$color__border-button-hover: var(--color-text);
+$color__border-button-focus: var(--color-text);
 $color__border-input: var(--color-heading);
 $color__border-abbr: var(--color-heading);

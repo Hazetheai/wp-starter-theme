@@ -71,31 +71,12 @@ $body_classes = [(is_front_page() ? "module-palette-primary" : $page_palette), $
 							'template-parts/atom-logo',
 							null,
 							array(
-								'type' => 'primary'
+								'type' => 'large'
 							)
 						); ?>
 					</a></h1>
 
-				<p class="site-title is-theme-secondary"><a href="<?php echo esc_url(home_url('/')); ?>"
-						rel="home">
-						<?= get_template_part(
-							'template-parts/atom-logo',
-							null,
-							array(
-								'type' => 'secondary'
-							)
-						); ?>
-					</a></p>
-				<p class="site-title is-theme-white"><a href="<?php echo esc_url(home_url('/')); ?>"
-						rel="home">
-						<?= get_template_part(
-							'template-parts/atom-logo',
-							null,
-							array(
-								'type' => 'white'
-							)
-						); ?>
-					</a></p>
+
 
 			</div><!-- .site-branding -->
 			<div class="nav-container">

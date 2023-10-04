@@ -10,6 +10,7 @@ if (!defined('WPCF7_AUTOP')) {
 }
 
 include "inc/inc.vite.php";
+include "inc/helper-fns.php";
 require_once(realpath(dirname(__FILE__) . '/blocks/register-blocks.php'));
 
 
@@ -225,7 +226,7 @@ function bhb_bayern_plugin_block_categories($categories)
 		[
 			[
 				'slug' => 'vitestarter',
-				'title' => __('ViteStarter Blocks', 'bhb-bayern'),
+				'title' => __('BHB_Bayern Blocks', 'bhb-bayern'),
 			],
 		]
 	);

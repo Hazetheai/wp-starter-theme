@@ -118,9 +118,9 @@
 					transition: all 0.3s ease-in-out;
 				}
 			}
-			@include text-style-link-large-tablet-mobile;
+			@include text-style-links-inputs-navigation-mobile-new;
 			@include media(">tablet") {
-				@include text-style-link-large;
+				@include text-style-links-inputs-input;
 			}
 		}
 	}
@@ -134,9 +134,9 @@
 			& .menu-item {
 				display: inline;
 
-				@include text-style-link-small-tablet-mobile;
+				@include text-style-links-inputs-navigation-mobile-new;
 				@include media(">tablet") {
-					@include text-style-link-small;
+					@include text-style-links-inputs-input;
 				}
 			}
 		}

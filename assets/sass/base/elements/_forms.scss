@@ -7,18 +7,22 @@
     position: relative;
     display: flex;
     flex-flow: column-reverse;
-
+    margin-top: 30px;
+    margin-inline: auto;
+    gap: 2.5rem;
     & label,
     & input {
         transition: all $anim-duration;
         touch-action: manipulation;
     }
 
-    & .floating-label {
-        margin-top: calc(-1 * var(--space-s));
-    }
-
     & select {
+        padding-bottom: 20px;
+        margin-top: -20px;
+        @include text-style-links-inputs-input-mobile;
+        @include media(">=tablet") {
+            @include text-style-links-inputs-input;
+        }
     }
 }
 
@@ -31,19 +35,23 @@
 }
 
 .floating-label {
-    cursor: text;
-    max-width: 66.66%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transform-origin: left bottom;
-    transform: translate(1rem, 2.7rem) scale(1);
+    position: absolute;
+    top: 8px;
+    left: 0;
+    transform: translate(0px, -16px);
     pointer-events: none;
+    transform-origin: left center;
+    transition: transform 250ms;
+    @include text-style-links-inputs-input-mobile;
+    @include media(">=tablet") {
+        @include text-style-links-inputs-input;
+    }
 }
-.floating-label--active {
-    // transform: translate(0, 0) scale(0.6);
-    // cursor: pointer;
-    opacity: 0;
+input:focus + .floating-label,
+textarea:focus + .floating-label,
+input:not(:placeholder-shown) + .floating-label,
+textarea:not(:placeholder-shown) + .floating-label {
+    transform: translate(0, -100%) scale(0.5);
 }
 /**
 * By default, the placeholder should be transparent. Also, it should 
@@ -54,7 +62,8 @@
     transition: inherit;
 }
 
-input:focus::-webkit-input-placeholder {
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
     opacity: 1;
 }
 
@@ -73,9 +82,23 @@ input:focus::-webkit-input-placeholder {
 }
 .just-validate-error-label {
     position: absolute;
-    bottom: calc(var(--space-xs) * -1);
-    left: -5.8%;
+    top: -6px;
+    right: 0;
     transform: scale(0.7);
+    display: flex;
+    align-items: center;
+    &:after {
+        content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20ZM9 13V15H11V13H9ZM11 8.42857V5H9V8.42857L9.47761 12H10.5224L11 8.42857Z" fill="%230F4533"/></svg>');
+        color: red;
+        position: relative;
+        top: 3px;
+        left: 6px;
+    }
+    @include text-style-functional-notification;
+
+    select ~ & {
+        right: 40px;
+    }
 }
 
 // select + .just-validate-error-label {
@@ -90,4 +113,8 @@ textarea ~ .just-validate-error-label {
 
 .wpcf7 form .wpcf7-response-output {
     margin-left: 3em;
+}
+
+.cf7-form-block {
+    margin: 5rem 0;
 }

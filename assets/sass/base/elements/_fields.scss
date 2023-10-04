@@ -15,42 +15,42 @@ input[type="datetime-local"],
 input[type="color"],
 select,
 textarea {
-	color: $color__text-input;
-	border: 2px solid var(--color-theme-black);
-	border-radius: $border-radius-sm;
-	padding: calc(var(--space-2xs) * 0.7) var(--space-3xs);
+	font-size: 20px;
+	width: 100%;
+	padding: 8px 0;
+	border: none;
+	transition: border-color 250ms;
+	background-color: transparent;
+	border: none;
+	border-radius: 0;
+	border-bottom: 1px solid var(--border-border-primary, #0f4533);
+	background-color: transparent;
+	@include text-style-copy-copy-3-mobile;
+	@include media(">=tablet") {
+		@include text-style-copy-copy-3;
+	}
 
 	&:focus {
-		color: $color__text-input-focus;
 		outline: none;
-		// border-color: var(--color-theme-primary);
+		border-bottom-color: #777;
 	}
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-}
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-// input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"] {
-	padding-left: 1rem;
-}
+	&::placeholder {
+		color: transparent;
+	}
 
-select {
-	padding-left: 0.75rem;
-	padding-right: 0.75rem;
+	// Hide Safari's autofill button
+	&::-webkit-contacts-auto-fill-button {
+		visibility: hidden;
+		pointer-events: none;
+		position: absolute;
+	}
+
+	&:focus {
+		&::-webkit-input-placeholder {
+			color: transparent;
+		}
+	}
 }
 
 input[type="checkbox"] {
@@ -93,12 +93,13 @@ select {
 	-webkit-appearance: none; /* Safari and Chrome */
 	appearance: none;
 	background: var(--color-bg)
-		url("data:image/svg+xml;utf8,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20stroke%3D%22var%28--color-theme-black%29%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M17.0711%2011.3431L10.7072%2017.7071C10.3166%2018.0976%209.68347%2018.0976%209.29295%2017.7071L2.92899%2011.3431C2.53846%2010.9526%202.53846%2010.3195%202.92898%209.92893C3.31951%209.53841%203.95268%209.53841%204.3432%209.92893L9.00005%2014.5858L9.00005%203C9.00005%202.44772%209.44777%202%2010.0001%202C10.5523%202%2011.0001%202.44772%2011.0001%203L11.0001%2014.5858L15.6569%209.92893C16.0474%209.53841%2016.6806%209.53841%2017.0711%209.92893C17.4616%2010.3195%2017.4616%2010.9526%2017.0711%2011.3431Z%22%20fill%3D%22black%22%2F%3E%0A%3C%2Fsvg%3E")
+		url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="34" height="18" viewBox="0 0 34 18" fill="none"><path d="M1 1L17 17L33 1" stroke="%230F4533"/></svg>')
 		no-repeat;
 	background-position: bottom 15px right 20px;
 }
 
 textarea {
+	padding: 3rem 0;
 	width: 100%;
 }
 

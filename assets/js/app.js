@@ -2,7 +2,7 @@ import barba from "@barba/core";
 import Lenis from "@studio-freight/lenis";
 import AutoBind from "auto-bind";
 import gsap from "gsap";
-
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Swiper from "swiper";
 import "swiper/css";
 
@@ -12,6 +12,8 @@ import {
   BREAKPOINT_TABLET,
   BREAKPOINT_PHONE,
 } from "./utils/breakpoints";
+import { contentAnimation, delay, pageTransition } from "./utils/animations";
+import { animateTableFilter } from "./animations/TableFilters";
 
 const globalLog = (...args) =>
   window?.__vlow_settings?.["logging"] ? console.log(...args) : null;
@@ -30,12 +32,14 @@ class App {
       window.__vlow_settings["logging"] = true;
       window.__vlow_settings["debug"] = true;
     }
+    this.webGlcontainer = document.querySelector("#webgl");
+    this.container = document.querySelector(".site");
 
     this.pageModules = getPageModules();
     AutoBind(this);
 
-    this.width = this.container.offsetWidth;
-    this.height = this.container.offsetHeight;
+    this.width = window.innerWidth;
+    this.height = window.innerHeight;
     this.isDesktop = this.width > BREAKPOINT_DESKTOP;
     this.isTablet =
       this.width < BREAKPOINT_DESKTOP && this.width > BREAKPOINT_TABLET;
@@ -84,6 +88,8 @@ class App {
         force: true,
         onComplete: null,
       });
+
+    const _onChange = () => this.onChange();
 
     barba.init({
       debug: !!window.__vlow_settings["debug"],
@@ -251,6 +257,12 @@ class App {
     this.lenis.on("scroll", ScrollTrigger.update);
   }
 
+  initTableFilters() {
+    const tableFilters = document.querySelectorAll(".table-filter");
+    if (!tableFilters || tableFilters.length === 0) return;
+    tableFilters.forEach(animateTableFilter);
+  }
+
   /**
    * Reactors.
    */
@@ -268,6 +280,8 @@ class App {
       globalLog(`initScrollButtons`);
       this.initSwiper();
       globalLog(`initSliders`);
+      this.initTableFilters();
+      globalLog(`initTableFilters`);
     } catch (error) {
       console.error(error);
     }

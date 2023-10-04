@@ -1,9 +1,7 @@
 p {
-	// margin-bottom: var(--space-2xs);
-	@include text-style-copy-regular-tablet-mobile;
-
-	@include media(">tablet") {
-		@include text-style-copy-regular-desktop;
+	@include text-style-copy-copy-3-mobile;
+	@include media(">=tablet") {
+		@include text-style-copy-copy-3;
 	}
 }
 
@@ -55,38 +53,48 @@ big {
 	font-size: 125%;
 }
 
-.text-subline {
-	@include text-style-subline-mobile;
+/**
+ * Copy
+ */
 
-	@include media(">phone") {
-		@include text-style-subline;
-	}
-}
-
-.text-notification,
-.notification {
-	@include text-style-notification;
-}
-.text-quote-large,
-.quote-large {
-	@include text-style-quote-large-mobile;
+.text-copy-1 {
+	@include text-style-copy-copy-1-mobile;
 	@include media(">=tablet") {
-		@include text-style-quote-large;
+		@include text-style-copy-copy-1;
+	}
+
+	&--strong {
+		@include text-style-copy-copy-1-strong-mobile;
+		@include media(">=tablet") {
+			@include text-style-copy-copy-1-strong;
+		}
 	}
 }
-.text-copy-regular,
-.copy-regular {
-	@include text-style-copy-regular-tablet-mobile;
 
-	@include media(">=desktop") {
-		@include text-style-copy-regular-desktop;
+.text-copy-2 {
+	@include text-style-copy-copy-2-mobile;
+	@include media(">=tablet") {
+		@include text-style-copy-copy-2;
 	}
 }
 
-.text-copy-bold,
-.copy-bold {
-	@include text-style-copy-bold-tablet-mobile;
-	@include media(">desktop") {
-		@include text-style-copy-bold-desktop;
+.text-copy-3 {
+	@include text-style-copy-copy-3-mobile;
+	@include media(">=tablet") {
+		@include text-style-copy-copy-3;
 	}
+
+	&--underlined {
+		@include text-style-copy-copy-3-mobile-underlined;
+		@include media(">=tablet") {
+			@include text-style-copy-copy-3-underlined;
+		}
+	}
+}
+
+.text-functional-notification {
+	@include text-style-functional-notification;
+}
+.text-functional-superscript {
+	@include text-style-functional-input-superscript;
 }

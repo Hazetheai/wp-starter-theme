@@ -221,11 +221,6 @@
             .space-module {
                 padding: 0;
             }
-
-            & .title {
-                // use cop-bold desktop mixin
-                @include text-style-copy-bold-desktop;
-            }
         }
     }
 

@@ -37,7 +37,7 @@
     "compile:rtl": "rtlcss style.css style-rtl.css",
     "lint:scss": "wp-scripts lint-style 'assets/sass/**/*.scss'",
     "lint:js": "wp-scripts lint-js 'js/*.js'",
-    "bundle": "npm run build && dir-archiver --src . --dest ../bhb-bayern.zip --exclude assets/js assets/css assets/sass node_modules vlow-blocks/development vlow-blocks/node_modules vlow-blocks/src vlow-blocks/development vlow-blocks/vendor .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map yarn.lock"
+    "bundle": "npm run build && dir-archiver --src . --dest ../bhb-bayern.zip --exclude figma-exports assets/js assets/css assets/sass node_modules vlow-blocks/development vlow-blocks/node_modules vlow-blocks/src vlow-blocks/development vlow-blocks/vendor .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map yarn.lock"
   },
   "dependencies": {
     "@barba/core": "^2.9.7",

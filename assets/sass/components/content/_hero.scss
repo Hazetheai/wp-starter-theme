@@ -104,12 +104,9 @@
             width: 93%;
             max-width: 840px;
             margin: 0 auto;
-            @include text-style-headlines-h-3-mobile;
+            @include text-style-headlines-heading-3-deco-mobile;
             @include media(">=tablet") {
-                @include text-style-headlines-h-3-tablet;
-            }
-            @include media(">=desktop") {
-                @include text-style-headlines-h-3-desktop;
+                @include text-style-headlines-heading-3-deco;
             }
         }
     }
