@@ -7,7 +7,7 @@ import { colors } from "../../../shared/lib";
 import edit from "./edit";
 import save from "./save";
 
-registerBlockType("##namespace##/##name##", {
+registerBlockType("vitestarter/atoms", {
   edit,
   save,
   attributes: {

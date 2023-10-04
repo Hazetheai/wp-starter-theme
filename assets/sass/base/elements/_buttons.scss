@@ -2,7 +2,8 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
-.button {
+.button,
+.button--admin.is.higher.specificity {
 	cursor: pointer;
 	display: flex;
 	border-color: transparent;

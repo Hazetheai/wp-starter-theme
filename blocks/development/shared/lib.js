@@ -1,7 +1,7 @@
 export const colors = {
-  primary: "#1C4371",
-  secondary: "#93D1D8",
-  white: "#fff",
-  //   black: "#000",
-  grey: "#E4E4E4",
+  primary: "var(--color-green-dark, #0f4533ff)",
+  secondary: "var(--color-green-light, #ebf4efff)",
+  white: "var(--color-white, #fff)",
+  black: "var(--color-black, #000)",
+  grey: "var(--color-grey, #e4e4e4)",
 };

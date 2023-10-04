@@ -22,9 +22,9 @@ require_once(realpath(dirname(__FILE__) . '/blocks/register-blocks.php'));
  * @package Vite_starter
  */
 
-if (!defined('BHB_BAYERNVERSION')) {
+if (!defined('BHB_BAYERN_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('BHB_BAYERNVERSION', '0.9.69');
+	define('BHB_BAYERN_VERSION', '0.1.0');
 }
 
 /**
@@ -160,11 +160,11 @@ function bhb_bayern_scripts()
 {
 
 	if (defined('IS_VITE_DEVELOPMENT') && IS_VITE_DEVELOPMENT === false) {
-		wp_enqueue_style('bhb-bayern-style', get_stylesheet_uri(), array(), BHB_BAYERNVERSION);
+		wp_enqueue_style('bhb-bayern-style', get_stylesheet_uri(), array(), BHB_BAYERN_VERSION);
 		wp_style_add_data('bhb-bayern-style', 'rtl', 'replace');
 	}
 
-	// wp_enqueue_script('vitestarter-by-vlownavigation', get_template_directory_uri() . '/js/navigation.js', array(), BHB_BAYERNVERSION, true);
+	// wp_enqueue_script('vitestarter-by-vlownavigation', get_template_directory_uri() . '/js/navigation.js', array(), BHB_BAYERN_VERSION, true);
 
 	// if (is_singular() && comments_open() && get_option('thread_comments')) {
 	// 	wp_enqueue_script('comment-reply');
@@ -216,6 +216,7 @@ function bhb_bayern_allowed_block_types($allowed_blocks, $editor_context)
 		'vitestarter/content',
 		'vitestarter/form',
 		'vitestarter/hero',
+		'vitestarter/atoms',
 	);
 }
 
