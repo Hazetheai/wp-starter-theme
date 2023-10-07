@@ -1,0 +1,19 @@
+.centered-intro {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding: var(--space-5xl) var(--space-xs);
+    text-align: center;
+
+    & .link {
+        width: max-content;
+        margin: 0 auto;
+    }
+
+    & .subline {
+        @include media(">=phone") {
+            max-width: 75%;
+            margin: 0 auto;
+        }
+    }
+}

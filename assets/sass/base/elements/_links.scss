@@ -1,4 +1,16 @@
+.overlay-link::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: " ";
+	z-index: 5;
+	cursor: pointer;
+}
+
 .text-links-navigation {
+	color: currentColor;
 	@include text-style-links-inputs-navigation-mobile;
 	@include media(">=tablet") {
 		@include text-style-links-inputs-navigation;
@@ -16,6 +28,7 @@
 }
 
 .text-button {
+	color: currentColor;
 	@include text-style-links-inputs-button-text-mobile;
 	@include media(">=tablet") {
 		@include text-style-links-inputs-button-text;
@@ -23,6 +36,7 @@
 }
 
 .text-table-header {
+	color: currentColor;
 	@include text-style-links-inputs-table-header-mobile;
 	@include media(">=tablet") {
 		@include text-style-links-inputs-table-header;
@@ -30,6 +44,7 @@
 }
 
 .text-links-meta {
+	color: currentColor;
 	@include text-style-links-inputs-meta-mobile;
 	@include media(">=tablet") {
 		@include text-style-links-inputs-meta;
@@ -61,7 +76,7 @@ a {
 			align-items: center;
 			gap: var(--space-4xs, 0.5rem);
 			border-radius: 0;
-			border: 1px solid var(--border-border-primary, #0f4533);
+			border: 1px solid currentColor;
 			background: var(--surface-surface-transparent, rgba(255, 255, 255, 0));
 
 			&:hover:not(.disabled) {
@@ -70,7 +85,6 @@ a {
 			}
 		}
 		&--secondary {
-			padding: var(--space-4xs, 0.5rem) 0;
 			justify-content: center;
 			align-items: center;
 			gap: var(--space-4xs, 0.5rem);
@@ -85,7 +99,7 @@ a {
 			align-items: flex-start;
 			gap: var(--space-4xs, 0.5rem);
 			flex-shrink: 0;
-			border-bottom: 1px solid var(--border-border-secondary, #708573);
+			border-bottom: 1px solid currentColor;
 			transition: all 0.2s ease-in-out;
 
 			&:hover:not(.disabled) {
@@ -137,7 +151,7 @@ a {
 			border-bottom: 1px solid transparent;
 
 			&:hover {
-				border-bottom: 1px solid var(--color-green-middle, #708573);
+				border-bottom: 1px solid currentColor;
 			}
 		}
 
@@ -166,8 +180,8 @@ a {
 			transition: all 0.2s ease-in-out;
 			&:hover {
 				border-radius: 0;
-				border-right: 1px solid var(--border-border-secondary, #708573);
-				border-left: 1px solid var(--border-border-secondary, #708573);
+				border-right: 1px solid currentColor;
+				border-left: 1px solid currentColor;
 				transition: all 0.2s ease-in-out;
 				text-shadow:
 					-0.09px -0.09px 0 currentColor,

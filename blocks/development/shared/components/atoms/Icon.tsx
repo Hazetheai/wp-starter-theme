@@ -26,35 +26,55 @@ interface IconProps {
     | "back-to-top";
   stroke?: string;
   fill?: string;
+  className?: string;
+  width?: string;
+  height?: string;
 }
 
 const Icon: React.FC<IconProps> = ({
   type,
   stroke = "#708573",
   fill = "none",
+  className = "",
+  width,
+  height,
 }) => {
   switch (type) {
     case "back-to-top":
       return (
         <svg
+          className={className}
           data-icon-name={type}
-          width="48"
-          height="48"
+          width={width || "48"}
+          height={height || "48"}
           viewBox="0 0 48 48"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <rect x="0.5" y="0.5" width="47" height="47" fill={fill} />
+          <rect
+            x="0.5"
+            y="0.5"
+            width={width || "47"}
+            height={height || "47"}
+            fill={fill}
+          />
           <path d="M40 32L24 16L8 32" stroke={stroke} />
-          <rect x="0.5" y="0.5" width="47" height="47" stroke={stroke} />
+          <rect
+            x="0.5"
+            y="0.5"
+            width={width || "47"}
+            height={height || "47"}
+            stroke={stroke}
+          />
         </svg>
       );
     case "burger-closed":
       return (
         <svg
+          className={className}
           data-icon-name={type}
-          width="20"
-          height="20"
+          width={width || "20"}
+          height={height || "20"}
           viewBox="0 0 20 20"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -68,9 +88,10 @@ const Icon: React.FC<IconProps> = ({
     case "burger-open":
       return (
         <svg
+          className={className}
           data-icon-name={type}
-          width="21"
-          height="20"
+          width={width || "21"}
+          height={height || "20"}
           viewBox="0 0 21 20"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -82,10 +103,11 @@ const Icon: React.FC<IconProps> = ({
     case "alert":
       return (
         <svg
+          className={className}
           data-icon-name={type}
           xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
+          width={width || "20"}
+          height={height || "20"}
           viewBox="0 0 20 20"
           fill="none"
         >
@@ -100,10 +122,11 @@ const Icon: React.FC<IconProps> = ({
     case "chevron-up-dark":
       return (
         <svg
+          className={className}
           data-icon-name={type}
           xmlns="http://www.w3.org/2000/svg"
-          width="34"
-          height="18"
+          width={width || "34"}
+          height={height || "18"}
           viewBox="0 0 34 18"
           fill="none"
         >
@@ -114,10 +137,11 @@ const Icon: React.FC<IconProps> = ({
     case "chevron-up-light":
       return (
         <svg
+          className={className}
           data-icon-name={type}
           xmlns="http://www.w3.org/2000/svg"
-          width="34"
-          height="18"
+          width={width || "34"}
+          height={height || "18"}
           viewBox="0 0 34 18"
           fill="none"
         >
@@ -128,9 +152,10 @@ const Icon: React.FC<IconProps> = ({
     case "extended-left-mobile":
       return (
         <svg
+          className={className}
           data-icon-name={type}
-          width="41"
-          height="12"
+          width={width || "41"}
+          height={height || "12"}
           viewBox="0 0 41 12"
           fill={fill}
           xmlns="http://www.w3.org/2000/svg"
@@ -145,9 +170,10 @@ const Icon: React.FC<IconProps> = ({
     case "extended-out-desktop":
       return (
         <svg
+          className={className}
           data-icon-name={type}
-          width="15"
-          height="15"
+          width={width || "15"}
+          height={height || "15"}
           viewBox="0 0 15 15"
           fill={fill}
           xmlns="http://www.w3.org/2000/svg"
@@ -159,9 +185,10 @@ const Icon: React.FC<IconProps> = ({
     case "extended-out-mobile":
       return (
         <svg
+          className={className}
           data-icon-name={type}
-          width="12"
-          height="12"
+          width={width || "12"}
+          height={height || "12"}
           viewBox="0 0 12 12"
           fill={fill}
           xmlns="http://www.w3.org/2000/svg"
@@ -176,23 +203,28 @@ const Icon: React.FC<IconProps> = ({
     case "extended-right-desktop":
       return (
         <svg
+          className={className}
           data-icon-name={type}
-          width="41"
-          height="14"
-          viewBox="0 0 41 14"
-          fill={fill}
           xmlns="http://www.w3.org/2000/svg"
+          width={width || "119"}
+          height={height || "37"}
+          viewBox="0 0 119 37"
+          fill="none"
         >
-          <path d="M0 7H40M40 7L34 13M40 7L34 1" stroke={stroke} />
+          <path
+            d="M0 18.1H118M118 18.1L100.3 35.8M118 18.1L100.3 0.400024"
+            stroke={stroke}
+          />
         </svg>
       );
 
     case "extended-right-mobile":
       return (
         <svg
+          className={className}
           data-icon-name={type}
-          width="35"
-          height="12"
+          width={width || "35"}
+          height={height || "12"}
           viewBox="0 0 35 12"
           fill={fill}
           xmlns="http://www.w3.org/2000/svg"
@@ -207,9 +239,10 @@ const Icon: React.FC<IconProps> = ({
     case "short-large-right-desktop-1512":
       return (
         <svg
+          className={className}
           data-icon-name={type}
-          width="77"
-          height="25"
+          width={width || "77"}
+          height={height || "25"}
           viewBox="0 0 77 25"
           fill={fill}
           xmlns="http://www.w3.org/2000/svg"
@@ -224,9 +257,10 @@ const Icon: React.FC<IconProps> = ({
     case "short-large-right-desktop":
       return (
         <svg
+          className={className}
           data-icon-name={type}
-          width="118"
-          height="37"
+          width={width || "118"}
+          height={height || "37"}
           viewBox="0 0 118 37"
           fill={fill}
           xmlns="http://www.w3.org/2000/svg"
@@ -241,9 +275,10 @@ const Icon: React.FC<IconProps> = ({
     case "short-left-desktop":
       return (
         <svg
+          className={className}
           data-icon-name={type}
-          width="41"
-          height="14"
+          width={width || "41"}
+          height={height || "14"}
           viewBox="0 0 41 14"
           fill={fill}
           xmlns="http://www.w3.org/2000/svg"
@@ -258,9 +293,10 @@ const Icon: React.FC<IconProps> = ({
     case "short-left-mobile":
       return (
         <svg
+          className={className}
           data-icon-name={type}
-          width="41"
-          height="12"
+          width={width || "41"}
+          height={height || "12"}
           viewBox="0 0 41 12"
           fill={fill}
           xmlns="http://www.w3.org/2000/svg"
@@ -275,9 +311,10 @@ const Icon: React.FC<IconProps> = ({
     case "short-out-desktop":
       return (
         <svg
+          className={className}
           data-icon-name={type}
-          width="14"
-          height="14"
+          width={width || "14"}
+          height={height || "14"}
           viewBox="0 0 14 14"
           fill={fill}
           xmlns="http://www.w3.org/2000/svg"
@@ -292,9 +329,10 @@ const Icon: React.FC<IconProps> = ({
     case "short-right-desktop":
       return (
         <svg
+          className={className}
           data-icon-name={type}
-          width="40"
-          height="14"
+          width={width || "40"}
+          height={height || "14"}
           viewBox="0 0 40 14"
           fill={fill}
           xmlns="http://www.w3.org/2000/svg"
@@ -306,9 +344,10 @@ const Icon: React.FC<IconProps> = ({
     case "short-right-mobile":
       return (
         <svg
+          className={className}
           data-icon-name={type}
-          width="40"
-          height="12"
+          width={width || "40"}
+          height={height || "12"}
           viewBox="0 0 40 12"
           fill={fill}
           xmlns="http://www.w3.org/2000/svg"
@@ -323,9 +362,10 @@ const Icon: React.FC<IconProps> = ({
     case "simple-down-desktop":
       return (
         <svg
+          className={className}
           data-icon-name={type}
-          width="50"
-          height="26"
+          width={width || "50"}
+          height={height || "26"}
           viewBox="0 0 50 26"
           fill={fill}
           xmlns="http://www.w3.org/2000/svg"
@@ -337,9 +377,10 @@ const Icon: React.FC<IconProps> = ({
     case "simple-down-mobile":
       return (
         <svg
+          className={className}
           data-icon-name={type}
-          width="34"
-          height="18"
+          width={width || "34"}
+          height={height || "18"}
           viewBox="0 0 34 18"
           fill={fill}
           xmlns="http://www.w3.org/2000/svg"
@@ -351,9 +392,10 @@ const Icon: React.FC<IconProps> = ({
     case "simple-top-desktop":
       return (
         <svg
+          className={className}
           data-icon-name={type}
-          width="50"
-          height="26"
+          width={width || "50"}
+          height={height || "26"}
           viewBox="0 0 50 26"
           fill={fill}
           xmlns="http://www.w3.org/2000/svg"
@@ -365,9 +407,10 @@ const Icon: React.FC<IconProps> = ({
     case "simple-top-mobile":
       return (
         <svg
+          className={className}
           data-icon-name={type}
-          width="34"
-          height="18"
+          width={width || "34"}
+          height={height || "18"}
           viewBox="0 0 34 18"
           fill={fill}
           xmlns="http://www.w3.org/2000/svg"

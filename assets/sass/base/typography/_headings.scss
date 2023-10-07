@@ -5,6 +5,8 @@ h4,
 h5,
 h6 {
 	clear: both;
+	margin: 0;
+	margin-block: 0;
 	// z-index: 1;
 	// position: relative;
 
@@ -16,6 +18,7 @@ h6 {
 }
 
 .text-display-x {
+	margin: 0;
 	@include text-style-display-display-x-mobile;
 	@include media(">=tablet") {
 		@include text-style-display-display-x;
@@ -23,12 +26,14 @@ h6 {
 }
 
 .text-display-1 {
+	margin: 0;
 	@include text-style-display-display-1-mobile;
 	@include media(">=tablet") {
 		@include text-style-display-display-1;
 	}
 }
 .text-display-2 {
+	margin: 0;
 	@include text-style-display-display-2-mobile;
 	@include media(">=tablet") {
 		@include text-style-display-display-2;
@@ -36,6 +41,7 @@ h6 {
 }
 
 .text-display-3 {
+	margin: 0;
 	@include text-style-display-display-3-mobile;
 	@include media(">=tablet") {
 		@include text-style-display-display-3;
@@ -50,24 +56,32 @@ h6 {
 }
 
 .text-headlines-h1 {
+	margin: 0;
 	@include text-style-headlines-heading-1-mobile;
+	@include media(">=tablet") {
+		@include text-style-headlines-heading-1;
+	}
 }
 .text-headlines-h2 {
+	margin: 0;
 	@include text-style-headlines-heading-2-mobile;
 	@include media(">=tablet") {
 		@include text-style-headlines-heading-2;
 	}
 }
 .text-headlines-h2-strong {
+	margin: 0;
 	@include text-style-headlines-heading-2-strong-mobile;
 	@include media(">=tablet") {
 		@include text-style-headlines-heading-2-strong;
 	}
 }
 .text-headlines-h3-deco {
+	margin: 0;
 	@include text-style-headlines-heading-3-deco-mobile;
 }
 .text-headlines-h4 {
+	margin: 0;
 	@include text-style-headlines-heading-4-mobile;
 	@include media(">=tablet") {
 		@include text-style-headlines-heading-4;
@@ -75,6 +89,7 @@ h6 {
 }
 
 .text-overline {
+	margin: 0;
 	@include text-style-overlines-sublines-overline-mobile;
 	@include media(">=tablet") {
 		@include text-style-overlines-sublines-overline;

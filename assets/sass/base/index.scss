@@ -10,6 +10,14 @@
 @import "elements/media";
 @import "elements/tables";
 
+/* Molecules
+--------------------------------------------- */
+@import "molecules/project-teaser-card";
+@import "molecules/magazine-teaser-card";
+@import "molecules/project-intro";
+@import "molecules/section-intro";
+@import "molecules/centered-intro";
+
 /* Links
 --------------------------------------------- */
 @import "elements/links";

@@ -3,6 +3,7 @@ import classnames from "classnames";
 
 interface LinkProps {
   level?:
+    | "basic"
     | "primary"
     | "secondary"
     | "secondary-alt"
@@ -28,6 +29,7 @@ interface LinkProps {
   href?: string;
   external?: boolean;
   children?: React.ReactNode;
+  className?: string;
 }
 
 const Link: React.FC<LinkProps> = ({
@@ -39,9 +41,14 @@ const Link: React.FC<LinkProps> = ({
   href = "0#",
   external = false,
   children,
+  className,
+  ...rest
 }) => {
   const target = external ? "_blank" : "_self";
-  const className = classnames(
+  const cn = classnames(
+    {
+      "link--basic": level === "basic",
+    },
     {
       "link link--primary-button text-button":
         level === "primary" && textStyle === "button",
@@ -97,7 +104,8 @@ const Link: React.FC<LinkProps> = ({
 
   return (
     <a
-      className={className}
+      {...rest}
+      className={classnames(cn, className)}
       target={target}
       rel={target === "_blank" ? "noopener noreferrer" : ""}
       // disabled={disabled}
