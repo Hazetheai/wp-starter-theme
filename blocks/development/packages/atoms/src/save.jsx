@@ -182,6 +182,27 @@ export default function Save({ attributes }) {
             ]}
           />
           <FormField
+            fieldType="radio"
+            layout="horizontal"
+            label="Radio Label"
+            name="subject"
+            required
+            options={[
+              {
+                label: "Item 1",
+                value: "item-1",
+              },
+              {
+                label: "Item 2",
+                value: "item-2",
+              },
+              {
+                label: "Item 3",
+                value: "item-3",
+              },
+            ]}
+          />
+          <FormField
             fieldType="textarea"
             label="Nachricht"
             name="message"
@@ -201,7 +222,10 @@ export default function Save({ attributes }) {
                 >
                   Datenschutzerklärung
                 </a>{" "}
-                einverstanden.
+                einverstanden. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Molestias incidunt odio facilis dolor?
+                Perferendis mollitia iure officia omnis neque ullam, ab sed.
+                Quidem beatae vel maxime sunt iste quia cupiditate.
               </span>
             }
             name="checkbox"

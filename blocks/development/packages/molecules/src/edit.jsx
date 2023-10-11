@@ -8,7 +8,7 @@ import {
 } from "@wordpress/block-editor";
 import { ColorPalette, PanelBody, ToolbarGroup } from "@wordpress/components";
 import { __ } from "@wordpress/i18n";
-
+import MagazinIntro from "../../../shared/components/molecules/MagazinIntro";
 import "../../../shared/editor-style.scss";
 import { colors } from "../../../shared/lib";
 import "./editor-style.css";
@@ -18,6 +18,12 @@ import MagazineTeaserCard from "../../../shared/components/molecules/MagazineTea
 import ProjectIntro from "../../../shared/components/molecules/ProjectIntro";
 import SectionIntro from "../../../shared/components/molecules/SectionIntro";
 import CenteredIntro from "../../../shared/components/molecules/CenteredIntro";
+import MagazinArticleHeader from "../../../shared/components/molecules/MagazinArticleHeader";
+import Quote from "../../../shared/components/molecules/Quote";
+import CopyBlock from "../../../shared/components/molecules/CopyBlock";
+import PartnerCard from "../../../shared/components/molecules/PartnerCard";
+import ProjectContactCTA from "../../../shared/components/molecules/ProjectContactCTA";
+
 export default function Edit({ attributes, setAttributes, isSelected }) {
   const { background } = attributes;
 
@@ -79,12 +85,35 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
         <div class="grid-item">21</div>
         <div class="grid-item">22</div>
       </div>
-      {/* <ProjectTeaserCard image={image} /> */}
-      {/* <MagazineTeaserCard /> */}
-      {/* <ProjectIntro /> */}
-      {/* <SectionIntro /> */}
-      <CenteredIntro link={{ label: "Mehr Erfahren", url: "0#" }} />
-      <CenteredIntro subline="Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem." />
+      <ProjectContactCTA
+        attributes={attributes}
+        setAttributes={setAttributes}
+      />
+      <PartnerCard attributes={attributes} setAttributes={setAttributes} />
+      <CopyBlock attributes={attributes} setAttributes={setAttributes} />
+      <CopyBlock
+        namespace="copy_block_2"
+        attributes={attributes}
+        setAttributes={setAttributes}
+      />
+      <ProjectTeaserCard
+        attributes={attributes}
+        setAttributes={setAttributes}
+      />
+      <MagazineTeaserCard
+        attributes={attributes}
+        setAttributes={setAttributes}
+      />
+      <ProjectIntro attributes={attributes} setAttributes={setAttributes} />
+      <SectionIntro attributes={attributes} setAttributes={setAttributes} />
+      <CenteredIntro attributes={attributes} setAttributes={setAttributes} />
+
+      <MagazinIntro attributes={attributes} setAttributes={setAttributes} />
+      <MagazinArticleHeader
+        attributes={attributes}
+        setAttributes={setAttributes}
+      />
+      <Quote setAttributes={setAttributes} attributes={attributes} />
     </div>
   );
 }

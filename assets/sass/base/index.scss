@@ -1,41 +1,19 @@
 /* Typography
 --------------------------------------------- */
-@import "typography/typography";
-
-/* Elements
---------------------------------------------- */
-@import "elements/body";
-@import "elements/hr";
-@import "elements/lists";
-@import "elements/media";
-@import "elements/tables";
+@import "typography";
 
 /* Molecules
 --------------------------------------------- */
-@import "molecules/project-teaser-card";
-@import "molecules/magazine-teaser-card";
-@import "molecules/project-intro";
-@import "molecules/section-intro";
-@import "molecules/centered-intro";
-
-/* Links
---------------------------------------------- */
-@import "elements/links";
-
-/* Icon
---------------------------------------------- */
-@import "elements/icons";
+@import "molecules";
 
 /* Animations
 --------------------------------------------- */
-@import "animations/animations";
+@import "animations";
 
 /* Spacing
 --------------------------------------------- */
-@import "spacing/spacing";
+@import "spacing";
 
-/* Forms
+/* Elements
 --------------------------------------------- */
-@import "elements/buttons";
-@import "elements/fields";
-@import "elements/forms";
+@import "elements";

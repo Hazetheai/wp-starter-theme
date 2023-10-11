@@ -17,7 +17,8 @@ h6 {
 	}
 }
 
-.text-display-x {
+.text-display-x,
+.text-display-x.block-editor-plain-text.title {
 	margin: 0;
 	@include text-style-display-display-x-mobile;
 	@include media(">=tablet") {
@@ -25,14 +26,16 @@ h6 {
 	}
 }
 
-.text-display-1 {
+.text-display-1,
+.text-display-1.block-editor-plain-text.title {
 	margin: 0;
 	@include text-style-display-display-1-mobile;
 	@include media(">=tablet") {
 		@include text-style-display-display-1;
 	}
 }
-.text-display-2 {
+.text-display-2,
+.text-display-2.block-editor-plain-text.title {
 	margin: 0;
 	@include text-style-display-display-2-mobile;
 	@include media(">=tablet") {
@@ -40,7 +43,8 @@ h6 {
 	}
 }
 
-.text-display-3 {
+.text-display-3,
+.text-display-3.block-editor-plain-text.title {
 	margin: 0;
 	@include text-style-display-display-3-mobile;
 	@include media(">=tablet") {
@@ -55,32 +59,37 @@ h6 {
 	}
 }
 
-.text-headlines-h1 {
+.text-headlines-h1,
+.text-headlines-h1.block-editor-plain-text.title {
 	margin: 0;
 	@include text-style-headlines-heading-1-mobile;
 	@include media(">=tablet") {
 		@include text-style-headlines-heading-1;
 	}
 }
-.text-headlines-h2 {
+.text-headlines-h2,
+.text-headlines-h2.block-editor-plain-text.title {
 	margin: 0;
 	@include text-style-headlines-heading-2-mobile;
 	@include media(">=tablet") {
 		@include text-style-headlines-heading-2;
 	}
 }
-.text-headlines-h2-strong {
+.text-headlines-h2--strong,
+.text-headlines-h2--strong.block-editor-plain-text.title {
 	margin: 0;
 	@include text-style-headlines-heading-2-strong-mobile;
 	@include media(">=tablet") {
 		@include text-style-headlines-heading-2-strong;
 	}
 }
-.text-headlines-h3-deco {
+.text-headlines-h3--deco,
+.text-headlines-h3--deco.block-editor-plain-text.title {
 	margin: 0;
 	@include text-style-headlines-heading-3-deco-mobile;
 }
-.text-headlines-h4 {
+.text-headlines-h4,
+.text-headlines-h4.block-editor-plain-text.title {
 	margin: 0;
 	@include text-style-headlines-heading-4-mobile;
 	@include media(">=tablet") {
@@ -88,7 +97,8 @@ h6 {
 	}
 }
 
-.text-overline {
+.text-overline,
+.text-overline.block-editor-plain-text.title {
 	margin: 0;
 	@include text-style-overlines-sublines-overline-mobile;
 	@include media(">=tablet") {

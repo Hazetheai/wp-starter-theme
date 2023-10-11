@@ -36,7 +36,7 @@ export default function Save({ attributes }) {
   // Object.keys(attributes).forEach(
   //   (key) => (threeDataProps[keyF(key)] = attributes[key])
   // );
-  console.log("attributes", attributes);
+
   return (
     <section {...blockProps}>
       <div className="container block-theme">

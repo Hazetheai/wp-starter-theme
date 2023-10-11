@@ -14,7 +14,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 select,
-textarea {
+textarea:not([class^="block-editor"]) {
 	font-size: 20px;
 	width: 100%;
 	padding: 8px 0;
@@ -56,31 +56,27 @@ textarea {
 input[type="checkbox"] {
 	appearance: none;
 	/* For iOS < 15 to remove gradient background */
-	background-color: #fff;
+
 	/* Not removed via appearance */
 	margin: 0;
 	font: inherit;
 	color: currentColor;
-	width: 1.15em;
-	height: 1.15em;
-	border: 0.15em solid currentColor;
-	border-radius: 0.15em;
-	transform: translateY(-0.075em);
+
 	display: grid;
 	place-content: center;
 }
 
 input[type="checkbox"]::before {
-	content: url("assets/icons/Type=Checked.svg");
-	width: 1.49em;
-	height: 1.49em;
-	transform: scale(0);
+	content: url("/wp-content/themes/bhb-bayern/assets/icons/Checked=False.svg");
+	padding: var(--space-2xs);
+	// transform: scale(0);
 	transition: 120ms transform ease-in-out;
 	cursor: pointer;
 }
 
 input[type="checkbox"]:checked::before {
-	transform: scale(1);
+	content: url("/wp-content/themes/bhb-bayern/assets/icons/Checked=True.svg");
+	// transform: scale(1);
 }
 
 .wpcf7-checkbox label {

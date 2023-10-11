@@ -48,6 +48,42 @@ textarea:focus::-webkit-input-placeholder {
             @include text-style-links-inputs-input;
         }
     }
+
+    &--radio {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 0;
+        margin-bottom: 0;
+        list-style: none;
+
+        &.layout--horizontal {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        & label {
+            margin-bottom: 0;
+            & input {
+                margin-right: var(--space-3xs);
+            }
+        }
+    }
+
+    &--checkbox {
+        & label {
+            display: flex;
+            align-items: baseline;
+        }
+
+        & input[type="checkbox"] {
+            &::before {
+                position: relative;
+                top: 2px;
+            }
+        }
+    }
 }
 
 .form-submit {

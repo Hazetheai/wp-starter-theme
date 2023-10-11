@@ -8,7 +8,12 @@ import MagazineTeaserCard from "../../../shared/components/molecules/MagazineTea
 import ProjectIntro from "../../../shared/components/molecules/ProjectIntro";
 import SectionIntro from "../../../shared/components/molecules/SectionIntro";
 import CenteredIntro from "../../../shared/components/molecules/CenteredIntro";
-
+import MagazinIntro from "../../../shared/components/molecules/MagazinIntro";
+import MagazinArticleHeader from "../../../shared/components/molecules/MagazinArticleHeader";
+import Quote from "../../../shared/components/molecules/Quote";
+import CopyBlock from "../../../shared/components/molecules/CopyBlock";
+import PartnerCard from "../../../shared/components/molecules/PartnerCard";
+import ProjectContactCTA from "../../../shared/components/molecules/ProjectContactCTA";
 export default function Save({ attributes }) {
   let blockProps = useBlockProps.save({
     className: `module-molecules block-theme`,
@@ -44,13 +49,20 @@ export default function Save({ attributes }) {
         <div class="grid-item">22</div>
       </div>
       <div style={{ margin: 48 }} className="container">
-        {/* <ProjectTeaserCard image={image} link="https://bhb.de" /> */}
-        {/* <MagazineTeaserCard large /> */}
-        {/* <MagazineTeaserCard /> */}
-        {/* <ProjectIntro /> */}
-        {/* <SectionIntro /> */}
-        <CenteredIntro link={{ label: "Mehr Erfahren", url: "0#" }} />
-        <CenteredIntro subline="Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem." />
+        <ProjectContactCTA.Save attributes={attributes} />
+        <PartnerCard.Save attributes={attributes} />
+        <CopyBlock.Save attributes={attributes} />
+        <CopyBlock.Save namespace="copy_block_2" attributes={attributes} />
+        <ProjectTeaserCard.Save attributes={attributes} />
+        <MagazineTeaserCard.Save attributes={attributes} />
+
+        <ProjectIntro.Save attributes={attributes} />
+        <SectionIntro.Save attributes={attributes} />
+        <CenteredIntro.Save attributes={attributes} />
+
+        <MagazinIntro.Save attributes={attributes} />
+        <MagazinArticleHeader.Save attributes={attributes} />
+        <Quote.Save attributes={attributes} />
       </div>
     </section>
   );

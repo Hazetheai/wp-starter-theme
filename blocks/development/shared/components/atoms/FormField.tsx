@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import React from "react";
 
 interface FormFieldProps {
@@ -12,6 +13,7 @@ interface FormFieldProps {
   options: { label: string; value: string }[];
   name?: string;
   rows?: number;
+  layout?: "horizontal" | "vertical";
 }
 
 const FormField: React.FC<FormFieldProps> = ({
@@ -26,11 +28,12 @@ const FormField: React.FC<FormFieldProps> = ({
   inputType,
   name,
   rows,
+  layout = "vertical",
 }) => {
   switch (fieldType) {
     case "text":
       return (
-        <li className="form-control">
+        <li className="form-control form-control--text">
           <input
             type={inputType}
             inputMode={inputMode}
@@ -45,7 +48,7 @@ const FormField: React.FC<FormFieldProps> = ({
       );
     case "select":
       return (
-        <li className="form-control">
+        <li className="form-control form-control--select">
           <select
             name={name}
             required={required}
@@ -61,7 +64,7 @@ const FormField: React.FC<FormFieldProps> = ({
       );
     case "textarea":
       return (
-        <li className="form-control">
+        <li className="form-control form-control--textarea">
           <textarea
             placeholder={placeholder}
             required={required}
@@ -75,8 +78,8 @@ const FormField: React.FC<FormFieldProps> = ({
       );
     case "checkbox":
       return (
-        <li className="form-control">
-          <label>
+        <li className="form-control form-control--checkbox text-copy-3">
+          <label className="flex">
             <input
               type="checkbox"
               required={required}
@@ -90,24 +93,31 @@ const FormField: React.FC<FormFieldProps> = ({
       );
     case "radio":
       return (
-        <div>
+        <li>
           <label>{label}</label>
-          {options.map((option) => (
-            <div>
-              <label>
-                <input
-                  type="radio"
-                  required={required}
-                  disabled={disabled}
-                  value={option.value}
-                  checked={value === option.value}
-                  name={name}
-                />
-                {option.label}
-              </label>
-            </div>
-          ))}
-        </div>
+          <ul
+            className={classNames(
+              "form-control form-control--radio",
+              `layout--${layout}`
+            )}
+          >
+            {options.map((option) => (
+              <li>
+                <label>
+                  <input
+                    type="radio"
+                    required={required}
+                    disabled={disabled}
+                    value={option.value}
+                    checked={value === option.value}
+                    name={name}
+                  />
+                  {option.label}
+                </label>
+              </li>
+            ))}
+          </ul>
+        </li>
       );
     default:
       return null;
