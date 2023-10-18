@@ -17,7 +17,7 @@ registerBlockType("vitestarter/form", {
   edit,
   save,
   title: "Formular",
-  category: "vlow-blocks",
+  category: "vitestarter",
   attributes: {
     background: {
       type: "object",

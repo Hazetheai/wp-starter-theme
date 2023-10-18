@@ -12,7 +12,7 @@ registerBlockType("vitestarter/accordian", {
   edit,
   save,
   title: "Akkordeon",
-  category: "vlow-blocks",
+  category: "vitestarter",
   attributes: {
     background: {
       type: "object",

@@ -218,6 +218,7 @@ function bhb_bayern_allowed_block_types($allowed_blocks, $editor_context)
 		'vitestarter/hero',
 		'vitestarter/atoms',
 		'vitestarter/molecules',
+		'vitestarter/freeform-content',
 	);
 }
 

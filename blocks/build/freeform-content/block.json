@@ -1,9 +1,9 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "vitestarter/accordian",
+	"name": "vitestarter/freeform-content",
 	"version": "0.1.0",
-	"title": "accordian",
+	"title": "freeform-content",
 	"category": "vitestarter",
 	"description": "",
 	"supports": {

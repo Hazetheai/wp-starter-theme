@@ -11,7 +11,7 @@ registerBlockType("vitestarter/atoms", {
   edit,
   save,
   attributes: {
-    category: "vlow-blocks",
+    category: "vitestarter",
     background: {
       type: "object",
       default: { name: "secondary", color: colors.secondary },

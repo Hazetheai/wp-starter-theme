@@ -9,7 +9,7 @@ type Props = {
   namespace: string;
   accept?: string;
   allowedTypes?: string[];
-  keys: Record<string, any>;
+  keys?: Record<string, any>;
   labels?: Record<string, any>;
 };
 
@@ -29,7 +29,7 @@ const EditMedia: React.FC<Props> = ({
     <div className="edit-image">
       {attributes[namespace]?.image?.url ? (
         <>
-          <img src={attributes[namespace]?.image?.url} />
+          <img src={attributes[namespace].image.url} />
           <Button
             className="button-remove"
             isDestructive
@@ -51,6 +51,7 @@ const EditMedia: React.FC<Props> = ({
         <MediaPlaceholder
           labels={labels}
           onSelect={(media) => {
+            if (!attributes[namespace]) return;
             setAttributes({
               ...attributes,
               [namespace]: {

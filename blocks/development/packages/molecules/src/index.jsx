@@ -15,7 +15,7 @@ registerBlockType("vitestarter/molecules", {
     alignWide: true,
   },
   attributes: {
-    category: "vlow-blocks",
+    category: "vitestarter",
     background: {
       type: "object",
       default: { name: "secondary", color: colors.secondary },

@@ -10,7 +10,7 @@ registerBlockType("vitestarter/hero", {
   edit,
   save,
   title: "Hero",
-  category: "vlow-blocks",
+  category: "vitestarter",
   attributes: {
     title: {
       type: "string",
