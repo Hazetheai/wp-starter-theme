@@ -1,4 +1,4 @@
-# BHB Bayern Wordpress Theme
+# Starter Wordpress Theme
 
 This theme is intended to give an editor experience that resembles the front end. It is built with React using [Gutenberg blocks](https://developer.wordpress.org/block-editor/how-to-guides/). Aside from the more typically react way of structuring blocks, most WordPress standards are still in place. The theme was originally based off of [underscores](https://github.com/Automattic/_s)
 
