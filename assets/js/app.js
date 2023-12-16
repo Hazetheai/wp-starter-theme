@@ -268,7 +268,6 @@ class App {
    */
   loadPage(docData) {
     this.pageModules = getPageModules();
-    this.siemaInstances = this.siemaInstances || [];
     this.template = window.location.pathname;
 
     try {

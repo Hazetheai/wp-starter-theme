@@ -136,7 +136,7 @@
 </a>
 <div id="cf7-contact-form"
     class="cf7-form-block"
-    data-form-subjects="[{&quot;title&quot;:&quot;Allgemein&quot;,&quot;email&quot;:&quot;j.riordan@live.ie&quot;,&quot;id&quot;:&quot;8d537e31-a89b-4939-8ed0-30ae4d79cbb5&quot;},{&quot;title&quot;:&quot;Kontakt&quot;,&quot;email&quot;:&quot;jaconstefan92@gmail.com&quot;,&quot;id&quot;:&quot;6c20bae0-3bc7-4324-b964-7fcc42a9ac39&quot;},{&quot;title&quot;:&quot;Service-Anfrage&quot;,&quot;email&quot;:&quot;contact@jakeriordan.dev&quot;,&quot;id&quot;:&quot;88d98ca8-06ad-4ce6-badf-3e3b27e8b118&quot;}]"
+    data-form-subjects="[{&quot;title&quot;:&quot;Allgemein&quot;,&quot;email&quot;:&quot;j.riordan@live.ie&quot;,&quot;id&quot;:&quot;8d537e31-a89b-4939-8ed0-30ae4d79cbb5&quot;},{&quot;title&quot;:&quot;Kontakt&quot;,&quot;email&quot;:&quot;jaconstefan92@gmail.com&quot;,&quot;id&quot;:&quot;6c20bae0-3bc7-4324-b964-7fcc42a9ac39&quot;},{&quot;title&quot;:&quot;Service-Anfrage&quot;,&quot;email&quot;:&quot;email@example.com&quot;,&quot;id&quot;:&quot;88d98ca8-06ad-4ce6-badf-3e3b27e8b118&quot;}]"
     novalidate="novalidate">
     <div class="wpcf7 no-js"
         id="wpcf7-f685-p683-o1"
@@ -232,7 +232,7 @@
                         <option value="Betreff*">Betreff*</option>
                         <option value="j.riordan@live.ie">Allgemein</option>
                         <option value="jaconstefan92@gmail.com">Kontakt</option>
-                        <option value="contact@jakeriordan.dev">Service-Anfrage</option>
+                        <option value="email@example.com">Service-Anfrage</option>
                     </select>
                     <div class="just-validate-error-label">Bitte wählen Sie einen Betreff.</div>
                 </li>

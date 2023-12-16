@@ -1,7 +1,7 @@
 import { registerBlockType } from "@wordpress/blocks";
 import { v4 as uuidv4 } from "uuid";
 
-import "../../../../../assets/sass/components/content/_accordian.scss";
+import "../../../../../assets/sass/components/blocks/_accordian.scss";
 
 import { colors } from "../../../shared/lib";
 

@@ -7,19 +7,25 @@ type Props = {
   namespace: string;
   type?: "plain" | "rich";
   keys: Record<string, any>;
+  rest: any;
+  hideUI?: boolean;
 };
 
 const EditText: React.FC<Props> = ({
   attributes,
   setAttributes,
   namespace,
-  type = "plain",
+  type = "richText",
   keys = { text: "text" },
+  hideUI = false,
+  ...rest
 }) => {
   return (
-    <div className="edit-image">
+    <div className="edit-text">
       {type === "plain" ? (
         <PlainText
+          disabled={hideUI}
+          {...rest}
           value={attributes[namespace]?.[keys.text]}
           onChange={(text) =>
             setAttributes({
@@ -33,6 +39,8 @@ const EditText: React.FC<Props> = ({
         />
       ) : (
         <RichText
+          {...rest}
+          disabled={hideUI}
           value={attributes[namespace]?.[keys.text]}
           onChange={(text) =>
             setAttributes({

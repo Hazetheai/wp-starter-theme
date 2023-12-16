@@ -1,68 +1,58 @@
-[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
+# BHB Bayern Wordpress Theme
 
-# \_s
+This theme is intended to give an editor experience that resembles the front end. It is built with React using [Gutenberg blocks](https://developer.wordpress.org/block-editor/how-to-guides/). Aside from the more typically react way of structuring blocks, most WordPress standards are still in place. The theme was originally based off of [underscores](https://github.com/Automattic/_s)
 
-Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+## Dev Environment
 
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
+[Local by Flywheel](https://localwp.com/) was the primary dev environment
 
-- A modern workflow with a pre-made command-line interface to turn your project into a more pleasant experience.
-- A just right amount of lean, well-commented, modern, HTML5 templates.
-- A custom header implementation in `inc/custom-header.php`. Just add the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
-- Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
-- Some small tweaks in `inc/template-functions.php` that can improve your theming experience.
-- A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
-- 2 sample layouts in `assets/sass/layouts/` made using CSS Grid for a sidebar on either side of your content. Just uncomment the layout of your choice in `assets/sass/style.scss`.
-  Note: `.no-sidebar` styles are automatically loaded.
-- Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
-- Full support for `WooCommerce plugin` integration with hooks in `inc/woocommerce.php`, styling override woocommerce.css with product gallery features (zoom, swipe, lightbox) enabled.
-- Licensed under GPLv2 or later. :) Use it to make something cool.
+[This WP theme](https://github.com/blonestar/wp-theme-vite-tailwind) was added to the project to use [Vite](https://vitejs.dev/) for compilation of assets
 
-## Installation
+[This Project](https://southcoastweb.co.uk/open-source-software/vite-plugin-gutenberg-blocks/) was used to scaffold the blocks.
 
-### Requirements
+This will require [Node JS](https://nodejs.org/en) installed in your system. [Vite requires this version](https://vitejs.dev/guide/#scaffolding-your-first-vite-project)
 
-`_s` requires the following dependencies:
+## How to Install and Run the Project
 
-- [Node.js](https://nodejs.org/)
-- [Composer](https://getcomposer.org/)
+Set up your WordPress environment however you like. The steps for using Local By Flywheel are:
 
-### Quick Start
+1. Download and install Local
+2. Drag the .zip of the theme files (bhb-bayern folder) and database on to local to start the installation.
+   - If this is unsuccessful:
+     1. Create a new site in local. All defaults are fine.
+     2. Follow the instructions for [setting up the blocks](https://southcoastweb.co.uk/open-source-software/vite-plugin-gutenberg-blocks/) in your theme or plugin.
+     3. From the **development** folder of the blocks directory of the provided theme files (bhb-bayern > blocks > development) copy the **packages** & **shared** folders to the **development** folder of your new blocks folder
+     4. Optional - Vite Setup: Use [this repo](https://github.com/blonestar/wp-theme-vite-tailwind) as a guide for installing vite into your project
+3. From the theme file root: run `npm install -D`
+   1. Navigate to the development folder of your blocks. Run `npm install -D`
+4. To run either project, run `npm run dev` from the respective directory.
+5. If using the provided database the WP admin credentials are
+   1. Username: root
+   2. Password: toor
 
-Clone or download this repository, change its name to something else (like, say, `megatherium-is-awesome`), and then you'll need to do a six-step find and replace on the name in all the templates.
+## Development
 
-1. Search for `'bhb-bayern'` (inside single quotations) to capture the text domain and replace with: `'megatherium-is-awesome'`.
-2. Search for `bhb_bayern_` to capture all the functions names and replace with: `megatherium_is_awesome_`.
-3. Search for `Text Domain: BHB_bayern` in `style.css` and replace with: `Text Domain: megatherium-is-awesome`.
-4. Search for <code>&nbsp;\_s</code> (with a space before it) to capture DocBlocks and replace with: <code>&nbsp;Megatherium_is_Awesome</code>.
-5. Search for `bhb-bayern` to capture prefixed handles and replace with: `megatherium-is-awesome-`.
-6. Search for `BHB_BAYERN` (in uppercase) to capture constants and replace with: `MEGATHERIUM_IS_AWESOME_`.
+For static elements, using the blocks ‘save’ function will work fine. For dynamic elements you will need to use dynamic blocks. [Here is simple explainer](https://gutenberghub.com/how-to-create-dynamic-server-side-gutenberg-block/). The [blocks library](https://southcoastweb.co.uk/open-source-software/vite-plugin-gutenberg-blocks/#page_section_3) mentioned above explains how to set it up for this environment.
 
-Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `_s.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
+### Assets
 
-### Setup
+[Contact form 7](https://contactform7.com/) was used for forms.
 
-To start using all the tools that come with `_s` you need to install the necessary Node.js and Composer dependencies :
+Front end styles & and JS are located in `assets/`
 
-```sh
-$ composer install
-$ npm install
-```
+sass files are imported into the blocks `shared` folder to output styles on the frontend
 
-### Available CLI commands
+Design System tokens are included:
 
-`_s` comes packed with CLI commands tailored for WordPress theme development :
+- Sass Mixins are used for text styles.
+- CSS custom properties are used for colors, spacing & the grid
 
-- `composer lint:wpcs` : checks all PHP files against [PHP Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/).
-- `composer lint:php` : checks all PHP files for syntax errors.
-- `composer make-pot` : generates a .pot file in the `languages/` directory.
-- `npm run compile:css` : compiles SASS files to css.
-- `npm run compile:rtl` : generates an RTL stylesheet.
-- `npm run watch` : watches all SASS files and recompiles them to css when they change.
-- `npm run lint:scss` : checks all SASS files against [CSS Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/css/).
-- `npm run lint:js` : checks all JavaScript files against [JavaScript Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/javascript/).
-- `npm run bundle` : generates a .zip archive for distribution, excluding development and system files.
+JS is setup with [Barba.js](https://barba.js.org/), for smooth page transitions, [Lenis](https://lenis.studiofreight.com/) for smooth-scroll, [GSAP](https://gsap.com/) for animations & [Swiper.js](https://swiperjs.com/) for sliders. All logic is found in `index.js`
 
-Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
+Theme scripts & installed packages are in the package.json. They are enqueued in the `functions.php` file.
 
-Good luck!
+## Production
+
+If using the [wp-theme-vite-tailwind](https://github.com/blonestar/wp-theme-vite-tailwind) be sure to set the IS_VITE_DEVELOPMENT constant to false on the server. Ideally placed in the `wp-config.php` file.
+
+From the theme root, run `npm run bundle`. This will update the theme version, build the blocks, build the theme files and then zip the necessary files for preparation. It should result in `bhb-bayern.zip` in the same folder as the theme folder.
