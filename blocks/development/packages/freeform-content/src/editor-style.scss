@@ -1,0 +1,176 @@
+@import "../../../node_modules/react-grid-layout/css/styles.css";
+@import "../../../node_modules/react-resizable/css/styles.css";
+
+.bhb-grid {
+    margin: 0 auto;
+    &--mobile {
+        width: 400px;
+    }
+    &--tablet {
+        width: 600px;
+    }
+    &--desktop {
+        width: 830px;
+    }
+}
+
+.bhb-grid-item {
+    background-color: transparent;
+
+    &:hover {
+        .bhb-grid-item__controls {
+            pointer-events: auto;
+            visibility: visible;
+            opacity: 1;
+            transition: var(--base-transition);
+        }
+    }
+
+    &__controls {
+        pointer-events: none;
+        visibility: hidden;
+        opacity: 0;
+        position: relative;
+        transition: var(--base-transition);
+
+        &__edit-controls {
+            padding: var(--space-2xs);
+            min-width: 210px;
+        }
+
+        & .button-remove {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 99;
+        }
+        & .button-edit {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+    }
+    &__content {
+        position: relative;
+        // margin: var(--space-2xs);
+        color: var(--color-green-dark);
+        max-width: 100%;
+        max-height: 100%;
+        height: 100%;
+        overflow: hidden;
+        // display: grid;
+        // place-content: center;
+
+        & .edit-text {
+            height: 100%;
+            display: grid;
+            width: 100%;
+            place-content: center;
+            // cursor: text;
+            & textarea.block-editor-plain-text {
+                // min-height: 100%;
+                background-color: transparent;
+            }
+            // & .block-editor-rich-text__editable.rich-text {
+            //     min-height: 100%;
+            // }
+        }
+
+        & .edit-image {
+            height: 100%;
+            & .button-remove {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transition: var(--base-transition);
+                bottom: var(--space-2xs);
+                top: unset;
+            }
+
+            &:hover {
+                & .button-remove {
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: auto;
+                    transition: var(--base-transition);
+                }
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}
+
+.react-resizable-handle {
+    background: none;
+}
+
+.react-grid-item > .react-resizable-handle.react-resizable-handle-n {
+    &::after {
+        scale: 1.2;
+        border-color: var(--color-green-dark);
+        padding: var(--space-4xs);
+    }
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-s {
+    &::after {
+        scale: 1.2;
+        border-color: var(--color-green-dark);
+        padding: var(--space-4xs);
+    }
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-e {
+    &::after {
+        scale: 1.2;
+        border-color: var(--color-green-dark);
+        padding: var(--space-4xs);
+    }
+}
+.react-grid-item > .react-resizable-handle.react-resizable-handle-w {
+    &::after {
+        scale: 1.2;
+        border-color: var(--color-green-dark);
+        padding: var(--space-4xs);
+    }
+}
+
+.bhb-grid__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.bhb-grid__columns-overlay {
+    position: relative;
+    height: 100%;
+    display: grid;
+    margin: 0 auto;
+    gap: var(--bhb-editor-grid-gutter);
+
+    &--mobile {
+        grid-template-columns: repeat(4, 1fr);
+        width: 400px;
+    }
+    &--tablet {
+        grid-template-columns: repeat(8, 1fr);
+        width: 600px;
+    }
+    &--desktop {
+        grid-template-columns: repeat(12, 1fr);
+        width: 830px;
+    }
+
+    &__column {
+        background-color: #ff005a2e;
+    }
+}

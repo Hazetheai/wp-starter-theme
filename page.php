@@ -18,10 +18,13 @@ global $post;
 $post_slug = $post->post_name;
 ?>
 
-<main id="primary" class="site-main" data-barba="container" data-barba-namespace="<?= $post_slug ?>">
+<main id="primary"
+	class="site-main"
+	data-barba="container"
+	data-barba-namespace="<?= $post_slug ?>">
 
 	<?php
-	while (have_posts()) :
+	while (have_posts()):
 		the_post();
 
 		get_template_part('template-parts/content', 'page');

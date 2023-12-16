@@ -1,14 +1,66 @@
 :root {
-    --grid-columns: 12;
-    --grid-gap: 20px;
+    --grid-columns: 4;
+
+    --grid-margin: 24px;
+    --grid-gutter: 24px;
+
+    @include media(">=phone-xs") {
+        --grid-margin: 24px;
+    }
+    @include media(">=phone") {
+        --grid-columns: 8;
+        --grid-margin: 48px;
+    }
+    @include media(">=tablet") {
+        --grid-columns: 12;
+    }
+    @include media(">=desktop-lg") {
+        --grid-margin: 120px;
+    }
+
+    --grid-fs-total-width: calc(100vw - (var(--grid-margin) * 2));
+    --grid-fs-column-width: calc(var(--grid-fs-total-width) / var(--grid-columns));
+    --grid-fs-cols-1: calc(var(--grid-fs-column-width) * 1);
+    --grid-fs-cols-2: calc(var(--grid-fs-column-width) * 2);
+    --grid-fs-cols-3: calc(var(--grid-fs-column-width) * 3);
+    --grid-fs-cols-4: calc(var(--grid-fs-column-width) * 4);
+    --grid-fs-cols-5: calc(var(--grid-fs-column-width) * 5);
+    --grid-fs-cols-6: calc(var(--grid-fs-column-width) * 6);
+    --grid-fs-cols-7: calc(var(--grid-fs-column-width) * 7);
+    --grid-fs-cols-8: calc(var(--grid-fs-column-width) * 8);
+    --grid-fs-cols-9: calc(var(--grid-fs-column-width) * 9);
+    --grid-fs-cols-10: calc(var(--grid-fs-column-width) * 10);
+    --grid-fs-cols-11: calc(var(--grid-fs-column-width) * 11);
+    --grid-fs-cols-12: calc(var(--grid-fs-column-width) * 12);
+
+    --grid-fs-cols-1Q: var(--grid-fs-cols-1);
+    @include media(">=phone") {
+        --grid-fs-cols-1Q: var(--grid-fs-cols-2);
+    }
+    @include media(">=tablet") {
+        --grid-fs-cols-1Q: var(--grid-fs-cols-3);
+    }
+
+    --grid-fs-cols-half: var(--grid-fs-cols-2);
+    @include media(">=phone") {
+        --grid-fs-cols-half: var(--grid-fs-cols-4);
+    }
+    @include media(">=tablet") {
+        --grid-fs-cols-half: var(--grid-fs-cols-6);
+    }
+
+    --grid-fs-cols-3Q: var(--grid-fs-cols-2);
+    @include media(">=phone") {
+        --grid-fs-cols-3Q: var(--grid-fs-cols-4);
+    }
+    @include media(">=tablet") {
+        --grid-fs-cols-3Q: var(--grid-fs-cols-6);
+    }
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(var(--grid-columns), 1fr);
-    gap: var(--grid-gap);
+    gap: var(--grid-gutter);
+    margin: 0 var(--grid-margin);
 }
-
-// .grid-item {
-//     /* Usage: grid-column: span <col-span>; grid-row: span <row-span>; */
-// }

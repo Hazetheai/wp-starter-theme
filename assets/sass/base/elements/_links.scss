@@ -1,28 +1,232 @@
-a,
-.link {
-	text-underline-offset: 3px;
+.overlay-link::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: " ";
+	z-index: 5;
+	cursor: pointer;
+}
+
+.text-links-navigation {
+	color: currentColor;
+	@include text-style-links-inputs-navigation-mobile;
+	@include media(">=tablet") {
+		@include text-style-links-inputs-navigation;
+	}
+	&--new {
+		@include text-style-links-inputs-navigation-mobile-new;
+	}
+
+	&--strong {
+		@include text-style-links-inputs-navigation-strong-mobile;
+		@include media(">=tablet") {
+			@include text-style-links-inputs-navigation-strong;
+		}
+	}
+}
+
+.text-button {
+	color: currentColor;
+	@include text-style-links-inputs-button-text-mobile;
+	@include media(">=tablet") {
+		@include text-style-links-inputs-button-text;
+	}
+}
+
+.text-table-header {
+	color: currentColor;
+	@include text-style-links-inputs-table-header-mobile;
+	@include media(">=tablet") {
+		@include text-style-links-inputs-table-header;
+	}
+}
+
+.text-links-meta {
+	color: currentColor;
+	@include text-style-links-inputs-meta-mobile;
+	@include media(">=tablet") {
+		@include text-style-links-inputs-meta;
+	}
+
+	&--underline {
+		@include text-style-links-inputs-meta-mobile-underlined;
+		@include media(">=tablet") {
+			@include text-style-links-inputs-meta-underlined;
+		}
+	}
+}
+
+a {
+	display: inline-flex;
 	color: $color__link;
 	text-decoration: none;
+	transition: all 0.2s ease-in-out;
+	&.link {
+		&.uppercase {
+			text-transform: uppercase;
+			text-decoration: underline;
+			text-decoration-thickness: 1px;
+		}
 
-	&:hover,
-	&:focus,
-	&:active {
-		color: $color__link-hover;
+		&--primary-button {
+			padding: var(--space-2xs, 1rem) var(--space-xs, 1.5rem);
+			justify-content: center;
+			align-items: center;
+			gap: var(--space-4xs, 0.5rem);
+			border-radius: 0;
+			border: 1px solid currentColor;
+			background: var(--surface-surface-transparent, rgba(255, 255, 255, 0));
+
+			&:hover:not(.disabled) {
+				background: var(--surface-surface-cta-hover, #0f4533);
+				color: var(--text-text-cta-hover, #fff);
+			}
+		}
+		&--secondary {
+			justify-content: center;
+			align-items: center;
+			gap: var(--space-4xs, 0.5rem);
+			&:hover:not(.disabled) {
+				// TODO Extend the arrow
+			}
+		}
+
+		&--secondary-alt {
+			padding: 0.25rem;
+			justify-content: center;
+			align-items: flex-start;
+			gap: var(--space-4xs, 0.5rem);
+			flex-shrink: 0;
+			border-bottom: 1px solid currentColor;
+			transition: all 0.2s ease-in-out;
+
+			&:hover:not(.disabled) {
+				transition: all 0.2s ease-in-out;
+				transform-origin: bottom;
+				padding-bottom: 0rem;
+				margin-bottom: 0.25rem;
+			}
+		}
+
+		&--external {
+			padding: var(--space-4xs, 0.5rem) 0;
+			justify-content: center;
+			align-items: center;
+			gap: var(--space-4xs, 0.5rem);
+		}
+
+		&--main {
+			padding: var(--space-4xs, 0.5rem);
+			border-bottom: 3px solid transparent;
+
+			@include media(">=tablet") {
+				padding: var(--space-4xs, 0.5rem) var(--space-4xs, 0.5rem) var(--space-s, 2rem) var(--space-4xs, 0.5rem);
+			}
+
+			&:hover {
+				transition: all 0.2s ease-in-out;
+				border-bottom: 3px solid currentColor;
+			}
+
+			&--short {
+				padding: var(--space-4xs, 0.5rem) var(--space-4xs, 0.5rem) var(--space-2xs, 1rem)
+					var(--space-4xs, 0.5rem);
+				border-bottom: 3px solid transparent;
+				&:hover {
+					transition: all 0.2s ease-in-out;
+					border-bottom: 3px solid currentColor;
+				}
+			}
+		}
+
+		&--meta {
+			padding: var(--space-4xs, 0.5rem);
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			gap: 0.625rem;
+			flex-shrink: 0;
+			border-bottom: 1px solid transparent;
+
+			&:hover {
+				border-bottom: 1px solid currentColor;
+			}
+		}
+
+		footer & {
+			display: inline-flex;
+			padding: 0;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			gap: 0.625rem;
+			&:hover {
+				text-decoration-line: underline;
+				text-decoration-thickness: 1px;
+				text-underline-offset: 0.1rem;
+			}
+		}
+
+		&--sub {
+			display: inline-flex;
+			padding: 0 var(--space-4xs, 0.5rem);
+			align-items: center;
+			gap: 0;
+			border-radius: 0;
+			border-right: 1px solid transparent;
+			border-left: 1px solid transparent;
+			transition: all 0.2s ease-in-out;
+			&:hover {
+				border-radius: 0;
+				border-right: 1px solid currentColor;
+				border-left: 1px solid currentColor;
+				transition: all 0.2s ease-in-out;
+				text-shadow:
+					-0.09px -0.09px 0 currentColor,
+					0.09px -0.09px 0 currentColor,
+					-0.09px 0.09px 0 currentColor,
+					0.09px 0.09px 0 currentColor;
+				-webkit-transition: all 0.5s;
+				-moz-transition: all 0.5s;
+				-o-transition: all 0.5s;
+				transition: all 0.5s;
+			}
+		}
+		&--copy {
+			display: inline-flex;
+			padding: 0;
+			align-items: flex-start;
+			gap: 0.625rem;
+
+			&:hover {
+				text-decoration: underline;
+				text-decoration-line: underline;
+				text-decoration-thickness: 1px;
+				text-underline-offset: 0.1rem;
+			}
+		}
+
+		&.disabled {
+			cursor: not-allowed;
+			opacity: 0.5;
+		}
+
+		&.reverse {
+			flex-direction: row-reverse;
+			& > svg {
+				transform: rotate(180deg);
+			}
+		}
 	}
 
-	&:focus {
-		outline: thin dotted;
-	}
-
-	&:hover,
-	&:active {
-		outline: 0;
-	}
-
-	&.uppercase {
-		text-transform: uppercase;
-		text-decoration: underline;
-		text-decoration-thickness: 1px;
+	& img {
+		transition: all 0.2s ease-in-out;
+		&:hover {
+			transition: all 0.2s ease-in-out;
+			opacity: 0.8;
+		}
 	}
 }
 
@@ -30,37 +234,4 @@ span a,
 span .link {
 	color: currentColor;
 	text-decoration: underline;
-}
-
-a.button {
-	text-decoration: none;
-	&:hover,
-	&:focus,
-	&:active {
-		color: var(--color-theme-black);
-	}
-}
-
-.link-small {
-	@include text-style-link-small-tablet-mobile;
-	@include media(">tablet") {
-		@include text-style-link-small;
-	}
-	z-index: 1;
-	position: relative;
-}
-
-.link-small-underline {
-	@include text-style-link-small-underlined;
-	z-index: 1;
-	position: relative;
-}
-
-.link-large {
-	@include text-style-link-large-tablet-mobile;
-	@include media(">tablet") {
-		@include text-style-link-large;
-	}
-	z-index: 1;
-	position: relative;
 }

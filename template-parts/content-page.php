@@ -19,6 +19,10 @@
 		<?php
 		the_content();
 		?>
+
+
+	</div>
+
 	</div><!-- .entry-content -->
 
 

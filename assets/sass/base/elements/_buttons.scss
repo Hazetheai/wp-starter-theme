@@ -2,58 +2,30 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
-.button {
-	transition: all $anim-duration ease-out;
-	border: 2px solid;
-	border-color: $color__border-button;
-	border-radius: 8px;
-	background: $color__background-button;
-	color: $color__text-main;
-	padding: calc(var(--space-xs) / 2 - 2px) var(--space-xs);
-	box-shadow: 4px 4px 0px 0px #000000;
-	text-transform: uppercase;
-	font-weight: 700;
+.button,
+.button--admin.is.higher.specificity {
 	cursor: pointer;
-	@include truncate();
-	&:hover {
-		transform: translate(1px, 1px);
-		box-shadow: 1px 1px 0px 0px #000000;
-		border-color: var(--color-text);
-	}
-
-	&:active,
-	&:focus {
-		border-color: var(--color-theme-black);
-	}
+	display: flex;
+	border-color: transparent;
+	padding: var(--space-xs, 1.5rem) var(--space-m, 2.5rem);
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 0;
+	background: var(--color-beige, #fcf7f0);
+	transition: all $anim-duration ease-out;
+	gap: 0.625rem;
 
 	&:active {
-		transform: translate(2px, 2px);
-		box-shadow: 0px 0px 0px 0px #000000;
+		border-color: transparent;
 	}
 
-	&:disabled {
-		transform: translate(4px, 4px);
-		box-shadow: 0px 0px 0px 0px #000000;
-		color: var(--color-theme-black);
-		background-color: transparent;
-		opacity: 0.3;
+	&:hover:not(.disabled) {
+		border-color: var(--color-green-dark);
 	}
 
-	&.header-cta {
-		background-color: var(--color-theme-secondary);
-		padding: 0.4em 0.6em;
-
-		color: var(--color-theme-black);
-		border-color: var(--color-theme-black);
-		position: relative;
-		top: -10px;
-		@include media(">tablet") {
-			padding: 0.4em 1em;
-		}
-		&:hover {
-			// color: var(--color-theme-primary);
-			border-color: lighten(#000, 30%);
-		}
+	&.disabled {
+		opacity: 0.8;
+		cursor: not-allowed;
 	}
 	&.menu-toggle,
 	&.open-menu-toggle {
@@ -83,28 +55,6 @@ input[type="submit"],
 			}
 		}
 	}
-
-	&.scroll-button {
-		margin-top: var(--space-2xs);
-		border-color: var(--color-theme-white);
-		background-color: transparent;
-		color: var(--color-theme-white);
-		box-shadow: none;
-		@include text-style-link-small();
-		letter-spacing: 0.06em;
-		display: flex;
-		align-items: center;
-		svg {
-			// position: relative;
-			// top: 3px;
-			width: 1em;
-			margin: 0 var(--space-3xs) 0 var(--space-2xs);
-		}
-
-		&:hover {
-			transform: translate(0px, -1px);
-		}
-	}
 }
 
 .ui-element {
@@ -114,5 +64,30 @@ input[type="submit"],
 	&:hover {
 		transform: translate(1px, 1px);
 		box-shadow: 2px 2px 0px 0px #000000;
+	}
+}
+
+.table-filter {
+	min-height: fit-content;
+	position: relative;
+	&__container {
+	}
+	&__button {
+	}
+	&__items {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background: transparent;
+		list-style: none;
+		visibility: hidden;
+		width: 100%;
+	}
+	&__item {
+		margin-top: 0.5rem;
+		width: 100%;
+		& button {
+			width: 100%;
+		}
 	}
 }

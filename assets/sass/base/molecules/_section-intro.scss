@@ -1,0 +1,25 @@
+.section__intro {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    // margin-bottom: var(--space-m);
+    @include media(">=tablet") {
+        flex-direction: row;
+        // justify-content: space-between;
+        gap: 0;
+        h2 {
+            width: var(--grid-fs-cols-4);
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-m);
+        max-width: var(--grid-fs-cols-half);
+
+        @include media(">=tablet") {
+            gap: var(--space-l);
+        }
+    }
+}

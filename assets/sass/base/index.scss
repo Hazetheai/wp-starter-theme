@@ -1,29 +1,19 @@
 /* Typography
 --------------------------------------------- */
-@import "typography/typography";
+@import "typography";
 
-/* Elements
+/* Molecules
 --------------------------------------------- */
-@import "elements/body";
-@import "elements/hr";
-@import "elements/lists";
-@import "elements/media";
-@import "elements/tables";
-
-/* Links
---------------------------------------------- */
-@import "elements/links";
+@import "molecules";
 
 /* Animations
 --------------------------------------------- */
-@import "animations/animations";
+@import "animations";
 
 /* Spacing
 --------------------------------------------- */
-@import "spacing/spacing";
+@import "spacing";
 
-/* Forms
+/* Elements
 --------------------------------------------- */
-@import "elements/buttons";
-@import "elements/fields";
-@import "elements/forms";
+@import "elements";

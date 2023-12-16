@@ -1,0 +1,22 @@
+.partner__card {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+    max-width: var(--grid-fs-cols-4);
+    .title {
+        margin-bottom: var(--space-4xs);
+    }
+    @include media(">=tablet") {
+        gap: var(--space-l);
+    }
+
+    & img {
+        transition: var(--base-transition);
+    }
+    &:hover img {
+        transition: var(--base-transition);
+        opacity: 0.8;
+    }
+}

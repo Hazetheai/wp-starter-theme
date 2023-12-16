@@ -1,0 +1,9 @@
+svg[data-icon-name="back-to-top"] {
+    --btt-stroke: #0f4533;
+    --btt-fill: #ebf4ef;
+
+    &:hover {
+        --btt-stroke: #ebf4ef;
+        --btt-fill: #0f4533;
+    }
+}

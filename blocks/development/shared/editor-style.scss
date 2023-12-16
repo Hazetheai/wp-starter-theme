@@ -1,94 +1,47 @@
 @import "../../../assets/sass/abstracts";
+@import "../../../assets/sass/base/animations/transitions";
 @import "../../../assets/sass/components";
-@import "../../../assets/sass/base/typography/typography";
-@import "../../../assets/sass/base/spacing/spacing";
+@import "../../../assets/sass/base/molecules/";
+@import "../../../assets/sass/base/spacing/";
+@import "../../../assets/sass/base/typography/";
 
-@font-face {
-  font-family: "GT Pressura";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("https://staging.vitestarter-services.de/wp-content/themes/bhb-bayern/fonts/GT-Pressura-Standard-Regular.woff2")
-    format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
-    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-@font-face {
-  font-family: "GT Pressura";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("https://staging.vitestarter-services.de/wp-content/themes/bhb-bayern/fonts/GT-Pressura-Standard-Bold.woff2")
-    format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
-    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
-:root {
-  --color-theme-primary: #1c4371;
-  --color-theme-secondary: #93d1d8;
-  --color-theme-white: #fff;
-  --color-theme-grey: #e4e4e4;
-  --color-theme-black: #000;
-  --color-theme-alert: #e77474;
-
-  --color-bg: var(--color-theme-primary, #1c4371);
-  --color-heading: var(--color-theme-white, #fff);
-  --color-text: var(--color-theme-white, #fff);
-  --color-text-alt: var(--color-theme-secondary, #93d1d8);
-
-  --space-3xs: clamp(0.31rem, calc(0.08rem + 1.19vw), 1.5rem);
-  --space-2xs: clamp(0.63rem, calc(0.15rem + 2.38vw), 3rem);
-  --space-xs: clamp(0.94rem, calc(0.23rem + 3.56vw), 4.5rem);
-  --space-s: clamp(1.25rem, calc(0.3rem + 4.75vw), 6rem);
-  --space-m: clamp(1.88rem, calc(0.45rem + 7.12vw), 9rem);
-  --space-l: clamp(2.5rem, calc(0.6rem + 9.5vw), 12rem);
-  --space-xl: clamp(3.75rem, calc(0.9rem + 14.25vw), 18rem);
-  --space-2xl: clamp(5rem, calc(1.2rem + 19vw), 24rem);
-  --space-3xl: clamp(7.5rem, calc(1.8rem + 28.5vw), 36rem);
-
-  /* One-up pairs */
-  --space-3xs-2xs: clamp(0.31rem, calc(-0.22rem + 2.69vw), 3rem);
-  --space-2xs-xs: clamp(0.63rem, calc(-0.15rem + 3.88vw), 4.5rem);
-  --space-xs-s: clamp(0.94rem, calc(-0.07rem + 5.06vw), 6rem);
-  --space-s-m: clamp(1.25rem, calc(-0.3rem + 7.75vw), 9rem);
-  --space-m-l: clamp(1.88rem, calc(-0.15rem + 10.13vw), 12rem);
-  --space-l-xl: clamp(2.5rem, calc(-0.6rem + 15.5vw), 18rem);
-  --space-xl-2xl: clamp(3.75rem, calc(-0.3rem + 20.25vw), 24rem);
-  --space-2xl-3xl: clamp(5rem, calc(-1.2rem + 31vw), 36rem);
-
-  /* Custom pairs */
-  --space-s-l: clamp(1.25rem, calc(-0.9rem + 10.75vw), 12rem);
-}
+@import "../../../assets/sass/layouts/grid";
 
 .module-palette-primary {
-  --color-bg: var(--color-theme-primary, #1c4371);
-  --color-heading: var(--color-theme-white, #fff);
-  --color-text: var(--color-theme-white, #fff);
-  --color-text-alt: var(--color-theme-secondary, #93d1d8);
+  --color-bg: var(--color-theme-primary-green-light, #ebf4ef);
+  --color-heading: var(--color-theme-primary-green-dark, #0f4533);
+  --color-text: var(--color-theme-primary-green-dark, #0f4533);
+  --color-text-alt: var(--color-theme-white, #fff);
 }
 .module-palette-secondary {
-  --color-bg: var(--color-theme-secondary, #93d1d8);
-  --color-heading: var(--color-theme-white, #fff);
-  --color-text: var(--color-theme-black, #000);
-  --color-text-alt: var(--color-theme-primary, #1c4371);
+  --color-bg: var(--color-theme-primary-green-light, #ebf4ef);
+  --color-heading: var(--color-theme-primary-green-dark, #0f4533);
+  --color-text: var(--color-theme-primary-green-dark, #0f4533);
+  --color-text-alt: var(--color-theme-white, #fff);
 }
 .module-palette-white {
-  --color-bg: var(--color-theme-white, #fff);
-  --color-heading: var(--color-theme-secondary, #93d1d8);
-  --color-text: var(--color-theme-black, #000);
-  --color-text-alt: var(--color-theme-primary, #1c4371);
+  --color-bg: var(--color-theme-primary-green-light, #ebf4ef);
+  --color-heading: var(--color-theme-primary-green-dark, #0f4533);
+  --color-text: var(--color-theme-primary-green-dark, #0f4533);
+  --color-text-alt: var(--color-theme-white, #fff);
 }
 .module-palette-grey {
-  --color-bg: var(--color-theme-grey, #e4e4e4);
-  --color-heading: var(--color-theme-primary, #1c4371);
-  --color-text: var(--color-theme-black, #000);
-  --color-text-alt: var(--color-theme-secondary, #93d1d8);
+  --color-bg: var(--color-theme-primary-green-light, #ebf4ef);
+  --color-heading: var(--color-theme-primary-green-dark, #0f4533);
+  --color-text: var(--color-theme-primary-green-dark, #0f4533);
+  --color-text-alt: var(--color-theme-white, #fff);
+}
+
+.is-root-container {
+  background-color: var(--color-bg);
 }
 
 .block-editor-wrapper.block-theme.row {
   padding: 2rem;
+}
+
+* {
+  font-family: "Beausite Grand";
 }
 
 .block-theme,
@@ -206,7 +159,8 @@
 
 .editor-styles-wrapper .block-editor-plain-text,
 .block-editor-rich-text__editable.paragraph.rich-text {
-  font-family: "GT Pressura" !important;
+  font-family: "Founders Grotesk";
+  color: var(--color-theme-primary-green-dark);
 }
 
 .block-editor-link-control {
@@ -216,7 +170,7 @@
 
 .block-editor-plain-text.title {
   font-size: 2rem;
-  font-family: "GT Pressura";
+  font-family: "Founders Grotesk";
   font-weight: 700;
   font-style: normal;
   line-height: 48px;
@@ -225,7 +179,7 @@
 
   @media only screen and (min-width: 900px) {
     font-size: 2.4rem;
-    font-family: "GT Pressura";
+    font-family: "Founders Grotesk";
     font-weight: 700;
     font-style: normal;
     line-height: 56px;
@@ -235,7 +189,7 @@
 }
 .block-editor-plain-text.kicker {
   font-size: 1rem;
-  font-family: "GT Pressura";
+  font-family: "Founders Grotesk";
   font-weight: 700;
   font-style: normal;
   line-height: 24px;
@@ -247,7 +201,7 @@
 .text-quote-large,
 .quote-large {
   font-size: 2rem;
-  font-family: "GT Pressura";
+  font-family: "Founders Grotesk";
   font-weight: 700;
   font-style: normal;
   line-height: 38px;
@@ -257,7 +211,7 @@
 
 .link-small {
   font-size: 1rem;
-  font-family: "GT Pressura";
+  font-family: "Founders Grotesk";
   font-weight: 700;
   font-style: normal;
   line-height: 24px;
@@ -268,7 +222,7 @@
 
 .copy-regular {
   font-size: 1rem;
-  font-family: "GT Pressura";
+  font-family: "Founders Grotesk";
   font-weight: 400;
   font-style: normal;
   line-height: 24px;
@@ -279,7 +233,7 @@
 @media (min-width: 1024px) {
   .copy-regular {
     font-size: 1.2rem;
-    font-family: "GT Pressura";
+    font-family: "Founders Grotesk";
     font-weight: 400;
     font-style: normal;
     line-height: 28px;
@@ -290,7 +244,7 @@
 
 .copy-bold {
   font-size: 1rem;
-  font-family: "GT Pressura";
+  font-family: "Founders Grotesk";
   font-weight: 700;
   font-style: normal;
   line-height: 24px;
@@ -300,7 +254,7 @@
 @media (min-width: 1024px) {
   .copy-bold {
     font-size: 1.2rem;
-    font-family: "GT Pressura";
+    font-family: "Founders Grotesk";
     font-weight: 700;
     font-style: normal;
     line-height: 28px;
@@ -310,7 +264,7 @@
 }
 .text-h2 {
   font-size: 4.8rem;
-  font-family: "GT Pressura";
+  font-family: "Founders Grotesk";
   font-weight: 700;
   font-style: normal;
   line-height: 102px;
@@ -320,7 +274,7 @@
 
 .text-h1 {
   font-size: 5.6rem;
-  font-family: "GT Pressura";
+  font-family: "Founders Grotesk";
   font-weight: 700;
   font-style: normal;
   line-height: 120px;
@@ -328,7 +282,7 @@
   text-transform: uppercase;
   @media (min-width: 1024px) {
     font-size: 7.5rem;
-    font-family: "GT Pressura";
+    font-family: "Founders Grotesk";
     font-weight: 700;
     font-style: normal;
     line-height: 160px;
@@ -339,7 +293,7 @@
 
 .text-h3 {
   font-size: 2rem;
-  font-family: "GT Pressura";
+  font-family: "Founders Grotesk";
   font-weight: 700;
   font-style: normal;
   line-height: 48px;
@@ -348,7 +302,7 @@
 
   @media (min-width: 1024px) {
     font-size: 2.4rem;
-    font-family: "GT Pressura";
+    font-family: "Founders Grotesk";
     font-weight: 700;
     font-style: normal;
     line-height: 56px;
@@ -421,4 +375,54 @@ select,
 optgroup,
 option {
   z-index: 2;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  color: #0f4533;
+}
+
+::placeholder {
+  color: var(--color-theme-primary-green-middle);
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  color: var(--color-theme-primary-green-middle);
+}
+
+.edit-link {
+  background-color: #fff;
+  padding: 1rem;
+  margin: 1rem 0;
+  width: max-content;
+  & h4 {
+    margin: 0 0 0.3rem 0;
+  }
+
+  & > button {
+    margin: 2rem 0 3rem 1rem;
+    height: 50%;
+  }
+
+  & .block-editor-link-control {
+    margin-block-end: 0;
+    margin-block-start: 0.5em;
+  }
+  & .block-editor-link-control__search-item {
+    padding: 0;
+  }
+  & .block-editor-link-control__search-item-title {
+    display: none;
+  }
+}
+
+.edit-image {
+  position: relative;
+  & .button-remove {
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+  }
 }

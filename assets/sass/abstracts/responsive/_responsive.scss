@@ -1,71 +1,116 @@
 $breakpoints: (
     "phone-xs": 375px,
-    "phone-s": 475px,
+    "phone-sm": 428px,
     "phone": 768px,
+    "tablet-sm": 1024px,
     "tablet": 1132px,
-    "desktop": 1512px
+    "desktop-sm": 1280px,
+    "desktop": 1512px,
+    "desktop-lg": 1920px
 ) !default;
 
 @import "./_include-media.scss";
 
+.hide-for-phone-xs {
+    @include media(">phone-xs") {
+        display: none;
+    }
+}
+
+.hide-for-phone-sm {
+    @include media(">phone-sm") {
+        display: none;
+    }
+}
+
 .hide-for-phone {
-    @include media(">=phone") {
-        display: none !important;
+    @include media(">phone") {
+        display: none;
     }
 }
+
+.hide-for-tablet-sm {
+    @include media(">tablet-sm") {
+        display: none;
+    }
+}
+
 .hide-for-tablet {
-    @include media(">=tablet") {
-        display: none !important;
+    @include media(">tablet") {
+        display: none;
     }
 }
+
+.hide-for-desktop-sm {
+    @include media(">desktop-sm") {
+        display: none;
+    }
+}
+
 .hide-for-desktop {
-    @include media(">=desktop") {
-        display: none !important;
+    @include media(">desktop") {
+        display: none;
     }
 }
+
+.hide-for-desktop-lg {
+    @include media(">desktop-lg") {
+        display: none;
+    }
+}
+
+.show-for-phone-xs {
+    display: none;
+    @include media(">phone-xs") {
+        display: initial;
+    }
+}
+
+.show-for-phone-sm {
+    display: none;
+    @include media(">phone-sm") {
+        display: initial;
+    }
+}
+
 .show-for-phone {
-    @include media("<phone") {
-        display: none !important;
+    display: none;
+    @include media(">phone") {
+        display: initial;
     }
 }
+
+.show-for-tablet-sm {
+    display: none;
+    @include media(">tablet-sm") {
+        display: initial;
+    }
+}
+
 .show-for-tablet {
-    @include media("<tablet") {
-        display: none !important;
+    display: none;
+    @include media(">tablet") {
+        display: initial;
     }
 }
+
+.show-for-desktop-sm {
+    display: none;
+    @include media(">desktop-sm") {
+        display: initial;
+    }
+}
+
 .show-for-desktop {
-    @include media("<desktop") {
-        display: none !important;
+    display: none;
+    @include media(">desktop") {
+        display: initial;
     }
 }
 
-:root {
-    // Figma Spacing Steps
-
-    --space-step-s: var(--space-3xs);
-
-    @include media(">phone") {
-        --space-step-s: var(--space-2xs);
-    }
-    @include media(">tablet") {
-        --space-step-s: var(--space-xs);
-    }
-    //
-    --space-step-m: var(--space-s);
-
-    @include media(">phone") {
-        --space-step-m: var(--space-m);
-    }
-    @include media(">tablet") {
-        --space-step-m: var(--space-l);
-    }
-    //
-    --space-step-l: var(--space-xl);
-
-    @include media(">phone") {
-        --space-step-l: var(--space-2xl);
-    }
-    @include media(">tablet") {
-        --space-step-l: var(--space-3xl);
+.show-for-desktop-lg {
+    display: none;
+    @include media(">desktop-lg") {
+        display: initial;
     }
 }

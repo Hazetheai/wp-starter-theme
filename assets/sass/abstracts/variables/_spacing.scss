@@ -1,7 +1,9 @@
 // * @link https://utopia.fyi/space/calculator?c=320,20,1.2,1512,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,s,2xl,12 */
 // Old spacing
 :root {
-    --space-3xs: 8px;
+    --space-4xs: 8px;
+
+    --space-3xs: 12px;
 
     --space-2xs: 16px;
 
@@ -15,7 +17,11 @@
 
     --space-xl: 64px;
 
-    --space-2xl: 96px;
+    --space-2xl: 80px;
 
-    --space-3xl: 144px;
+    --space-3xl: 96px;
+
+    --space-4xl: 112px;
+
+    --space-5xl: 144px;
 }

@@ -1,0 +1,19 @@
+.project__contact-cta {
+    background-color: var(--color-green-dark);
+    width: 100%;
+    padding: var(--space-2xs) 0;
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        .title {
+            color: var(--color-theme-white);
+            margin-right: var(--space-2xs);
+        }
+        .link {
+            padding: var(--space-3xs) var(--space-2xs);
+            background-color: var(--color-theme-white);
+        }
+    }
+}

@@ -8,4 +8,6 @@ style.css.map
 /localhost-key.pem
 
 assets/images
+dist/*
+blocks/build/*
 # assets/models

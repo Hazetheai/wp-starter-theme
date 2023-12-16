@@ -1,0 +1,13 @@
+.project__intro {
+    h1 {
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: var(--space-m);
+        @include media(">=desktop") {
+            & span + span {
+                margin-top: calc(-1 * var(--space-xs));
+            }
+        }
+    }
+}

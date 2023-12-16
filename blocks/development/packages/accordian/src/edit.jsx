@@ -30,7 +30,6 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
 
   return (
     <div key="render" {...blockProps}>
-      {console.log("activeItem", activeItem)}
       <InspectorControls>
         <PanelBody title={__("General", "bhb-bayern")} initialOpen>
           <ToggleControl
@@ -86,7 +85,6 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
             >
               <input
                 onChange={(e) => {
-                  console.log("e.target", e.target.checked);
                   setActiveItem(e.target.checked ? e.target.id : null);
                 }}
                 type={options.multiple ? "checkbox" : "radio"}
@@ -102,8 +100,6 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
                   value={item.question}
                   className="tab-question"
                   onChange={(question) => {
-                    console.log("question", question);
-                    console.log("item", item);
                     setAttributes({
                       items: items.map((_item) => {
                         if (_item.id !== item.id) {

@@ -1,0 +1,118 @@
+// General
+
+input[name="rd"] {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+/* Accordion styles */
+
+.wp-block .wp-block-vitestarter-accordian {
+    .tabs {
+        padding: var(--space-l) 20px var(--space-l) 0;
+        padding-right: 1rem;
+    }
+}
+
+.module-accordian {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.tabs {
+    border-radius: 8px;
+    overflow-y: hidden;
+    padding-right: 5px;
+    // max-width: 1440px;
+    // margin: 0 auto;
+}
+.tab {
+    position: relative;
+    width: 100%;
+    color: var(--color-theme-primary);
+    overflow-y: hidden;
+    margin-bottom: var(--space-2xs);
+    border: 2px solid var(--color-theme-black);
+    &-label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+        background: var(--color-theme-secondary);
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 20px;
+        font-family: "Founders Grotesk";
+        font-weight: 400;
+        font-style: normal;
+        line-height: 24px;
+        text-decoration: none;
+        text-transform: none;
+        @media (min-width: 1132px) {
+            padding: 1em 2em;
+            font-size: 24px;
+            font-family: "Founders Grotesk";
+            font-weight: 700;
+            font-style: normal;
+            line-height: 30px;
+            text-decoration: none;
+            text-transform: none;
+        }
+        svg.open {
+            display: inline-block;
+        }
+        svg.closed {
+            display: none;
+        }
+
+        & textarea {
+            min-width: fit-content;
+            unicode-bidi: embed;
+        }
+    }
+
+    &-content {
+        max-height: 0;
+        padding: 0 1em;
+        color: var(--color-theme-black);
+        background: white;
+        transition: all 300ms;
+        margin-bottom: 0;
+    }
+    &-close {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1em;
+        font-size: 0.75em;
+        background: var(--color-theme-secondary);
+        cursor: pointer;
+        &:hover {
+            background: var(--color-theme-white);
+        }
+    }
+
+    &.active {
+        border-color: var(--color-theme-black);
+        box-shadow: 1px 1px 0px 0px #000000;
+        transform: translate(1px, 1px);
+    }
+}
+
+// :checked
+input:checked {
+    + .tab-label {
+        background: var(--color-theme-secondary);
+
+        svg.open {
+            display: none;
+        }
+        svg.closed {
+            display: inline-block;
+        }
+    }
+    ~ .tab-content {
+        max-height: 100vh;
+        padding: 1em;
+    }
+}

@@ -12,7 +12,7 @@ registerBlockType("vitestarter/content", {
   edit,
   save,
   title: "Inhalt",
-  category: "vlow-blocks",
+  category: "vitestarter",
   attributes: {
     post: {
       type: "object",

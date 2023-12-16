@@ -1,0 +1,16 @@
+.copy-block {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    @include media(">=tablet") {
+        gap: var(--space-s);
+    }
+
+    & .title {
+        display: flex;
+        flex-direction: column;
+        // & span + span {
+        //     margin-top: calc(-1 * var(--space-xs));
+        // }
+    }
+}

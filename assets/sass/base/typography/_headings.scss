@@ -5,6 +5,8 @@ h4,
 h5,
 h6 {
 	clear: both;
+	margin: 0;
+	margin-block: 0;
 	// z-index: 1;
 	// position: relative;
 
@@ -15,31 +17,91 @@ h6 {
 	}
 }
 
-.text-h1 {
-	@include text-style-headlines-h-1-mobile;
-	@include media(">phone") {
-		@include text-style-headlines-h-1-tablet;
-	}
-	@include media(">=desktop") {
-		@include text-style-headlines-h-1-desktop;
+.text-display-x,
+.text-display-x.block-editor-plain-text.title {
+	margin: 0;
+	@include text-style-display-display-x-mobile;
+	@include media(">=tablet") {
+		@include text-style-display-display-x;
 	}
 }
 
-.text-h2 {
-	@include text-style-headlines-h-2-mobile;
-	@include media(">phone") {
-		@include text-style-headlines-h-2-tablet;
-	}
-	@include media(">=desktop") {
-		@include text-style-headlines-h-2-desktop;
+.text-display-1,
+.text-display-1.block-editor-plain-text.title {
+	margin: 0;
+	@include text-style-display-display-1-mobile;
+	@include media(">=tablet") {
+		@include text-style-display-display-1;
 	}
 }
-.text-h3 {
-	@include text-style-headlines-h-3-mobile;
-	@include media(">phone") {
-		@include text-style-headlines-h-3-tablet;
+.text-display-2,
+.text-display-2.block-editor-plain-text.title {
+	margin: 0;
+	@include text-style-display-display-2-mobile;
+	@include media(">=tablet") {
+		@include text-style-display-display-2;
 	}
-	@include media(">=desktop") {
-		@include text-style-headlines-h-3-desktop;
+}
+
+.text-display-3,
+.text-display-3.block-editor-plain-text.title {
+	margin: 0;
+	@include text-style-display-display-3-mobile;
+	@include media(">=tablet") {
+		@include text-style-display-display-3;
+	}
+
+	&--strong {
+		@include text-style-display-display-3-strong-mobile;
+		@include media(">=tablet") {
+			@include text-style-display-display-3-strong;
+		}
+	}
+}
+
+.text-headlines-h1,
+.text-headlines-h1.block-editor-plain-text.title {
+	margin: 0;
+	@include text-style-headlines-heading-1-mobile;
+	@include media(">=tablet") {
+		@include text-style-headlines-heading-1;
+	}
+}
+.text-headlines-h2,
+.text-headlines-h2.block-editor-plain-text.title {
+	margin: 0;
+	@include text-style-headlines-heading-2-mobile;
+	@include media(">=tablet") {
+		@include text-style-headlines-heading-2;
+	}
+}
+.text-headlines-h2--strong,
+.text-headlines-h2--strong.block-editor-plain-text.title {
+	margin: 0;
+	@include text-style-headlines-heading-2-strong-mobile;
+	@include media(">=tablet") {
+		@include text-style-headlines-heading-2-strong;
+	}
+}
+.text-headlines-h3--deco,
+.text-headlines-h3--deco.block-editor-plain-text.title {
+	margin: 0;
+	@include text-style-headlines-heading-3-deco-mobile;
+}
+.text-headlines-h4,
+.text-headlines-h4.block-editor-plain-text.title {
+	margin: 0;
+	@include text-style-headlines-heading-4-mobile;
+	@include media(">=tablet") {
+		@include text-style-headlines-heading-4;
+	}
+}
+
+.text-overline,
+.text-overline.block-editor-plain-text.title {
+	margin: 0;
+	@include text-style-overlines-sublines-overline-mobile;
+	@include media(">=tablet") {
+		@include text-style-overlines-sublines-overline;
 	}
 }
